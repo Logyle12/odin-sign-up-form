@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signup-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+}
+
+.signup-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 85%;
+}
+
+.signup-wrapper > * {
+    width: 50%;
+    height: 100%;
+}
+
+.signup-hero {
+    background-color: blueviolet;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.signup-form {
+    background-color: cadetblue;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
