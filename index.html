@@ -29,13 +29,52 @@
             <p id="content-description">Create an account to get started. Your library and activity will be saved to your profile.</p>
                             </div>
                         </section>
-                        <form class="signup-hero"></section>
-            <section class="signup-form">
-                <div class="form-wrapper">
-                    <form action="POST"></form>
-                </div>
-            </section>
-        </div>
-    </div>
-</body>
+                        <form class="sign-up-form" action="" method="POST">
+                            <div class="form-group">
+                                <label for="username">USERNAME</label>
+                                <div class="input-wrapper">
+                                    <img src="UI Icons/Input Icons/username_icon.svg" class="input-icon" id="username-icon" alt="User avatar icon to repersent username input">
+                                    <input type="text" class="form-control" id="username" name="user_name" placeholder="Enter your username">
+                                    <p class="input-helper">A-Z, 0-9, and underscores only.</p>
+                                </div>
+                                <div class="horizontal-line-wrapper">
+                                    <hr class="horizontal-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">PASSWORD</label>
+                                <div class="input-wrapper">
+                                    <img src="UI Icons/Input Icons/password_icon.svg" class="input-icon" id="password-icon" alt="Padlock icon to repersent password input">
+                                    <input type="password" class="form-control" id="password" name="user_password" placeholder="Create a password">
+                                    <p class="input-helper">Minimum of 6 characters.</p>
+                                    <img src="UI Icons/Input Icons/reveal_password_icon.svg" class="input-icon" id="reveal-password-icon" alt="Open eye symbol to repersent password reveal button">
+                                </div>
+                                <div class="horizontal-line-wrapper">
+                                    <hr class="horizontal-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">EMAIL</label>
+                                <div class="input-wrapper">
+                                    <img src="UI Icons/Input Icons/email_icon.svg" class="input-icon" id="email-icon" alt="Email message icon to repersent emal input">
+                                    <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <section class="sign-up-legal">
+                                    <p>I am at least 16 years old and accept the <a id="terms-and-conditions-link">Terms & Conditions</a>.</p>
+                                    <input type="checkbox" id="terms-and-conditions" name="terms_and_conditions">
+                                </section>
+                            </div>
+                        </form>
+                        <section class="sign-up-submit">
+                            <button class="form-control" id="sign-up-button" type="submit">
+                                <span id="sign-up-button-text">Sign Up</span>
+                            </button>
+                        </section>
+                        <section class="login-wrapper">
+                            <p id="login-text">Already have an account? <a id="login-link">Log in</a></p>
+                        </section>
+                    </div>
+                </section>
 </html>
