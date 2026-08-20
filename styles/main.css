@@ -128,3 +128,10 @@
     border-bottom-left-radius: 28px;
 }
 
+/* Centers content inside both halves of the card */
+.sign-up-content, .sign-up-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
