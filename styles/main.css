@@ -121,3 +121,10 @@
     font-family: "Inter";
     font-weight: 400;
 }
+
+/* Rounded corners on the left side of the card */
+.sign-up-card, .sign-up-content {
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+}
+
