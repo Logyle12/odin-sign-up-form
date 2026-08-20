@@ -118,16 +118,6 @@
 .sign-up-card > * {
     width: 50%;
     height: 100%;
-}
-
-.signup-hero {
-    background-color: blueviolet;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-}
-
-.signup-form {
-    background-color: cadetblue;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    font-family: "Inter";
+    font-weight: 400;
 }
