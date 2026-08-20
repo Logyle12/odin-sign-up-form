@@ -82,13 +82,16 @@
     box-sizing: border-box;
 }
 
-.signup-container {
+/* Full screen wrapper with the page background gradient */
+.sign-up-wrapper {
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: chocolate;
+    background: linear-gradient(to bottom right, var(--main-bg-color-start), 
+                                                var(--main-bg-color-middle), 
+                                                var(--main-bg-color-stop));
 }
 
 .signup-wrapper {
