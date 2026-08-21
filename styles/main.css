@@ -303,3 +303,11 @@ h1, h2, h3, label {
     left: 0.85rem;
 }
 
+/* Positions the show/hide password icon */
+#reveal-password-icon {
+    top: 0.8275rem;
+    left: 23.25rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
