@@ -361,3 +361,18 @@ input.form-control::placeholder {
 .sign-up-legal p {
     line-height: 1.5rem;
 }
+
+/* Custom checkbox styling for terms and conditions */
+input[type="checkbox"]#terms-and-conditions {
+    all: unset;
+    width: 1.35rem;
+    height: 1.25rem;
+    margin-top: 4px;
+    border: 1.5px solid #596480;
+    border-radius: 6px;
+    background-color: #0D1429;
+    cursor: pointer;
+    position: relative;
+    vertical-align: text-top;
+}
+
