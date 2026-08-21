@@ -10,3 +10,22 @@ const allColumns = document.querySelectorAll('.collage-column');
 // Cover art already shown 
 let usedCoverArt = [];
 
+// Returns cover art entries that haven't been shown yet
+function getAvailableCoverArt() {
+    // Every cover has been used, reset the pool
+    if (usedCoverArt.length == TOTAL_COVER_ART) {
+        usedCoverArt.length = 0;
+    }
+
+    // Keep only entries not already marked as used
+    const availableCoverArt = coverArtData.filter((coverArtEntry) => {
+
+        const coverArtFilename = coverArtEntry["Cover Art"];
+        // Keep if not already used
+        return !usedCoverArt.includes(coverArtFilename);
+
+    });
+
+    return availableCoverArt;
+}
+
