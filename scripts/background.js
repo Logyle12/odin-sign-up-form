@@ -4,3 +4,6 @@ import coverArtData from '../UI Images/cover-art-filenames.json' with {type: 'js
 // Total number of cover art images available
 const TOTAL_COVER_ART = coverArtData.length;
 
+// Every scrolling column in the collage
+const allColumns = document.querySelectorAll('.collage-column');
+
