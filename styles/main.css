@@ -252,3 +252,8 @@ h1, h2, h3, label {
     font-weight: 600;
 }
 
+/* Field helper text styling */
+.form-group p {
+    font-weight: 550;
+}
+
