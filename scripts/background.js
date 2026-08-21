@@ -98,3 +98,5 @@ function initializeCollage() {
     
 }
 
+// Fill every column on load
+initializeCollage();
