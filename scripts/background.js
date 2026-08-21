@@ -29,3 +29,17 @@ function getAvailableCoverArt() {
     return availableCoverArt;
 }
 
+// Builds an image element for a piece of cover art
+function createCoverArt(coverArtImagePath) {
+    // Create the image element
+    const newCoverArt = document.createElement('img');
+
+    // Class for collage sizing and styling
+    newCoverArt.className = "collage-image";
+
+    // Set the image source
+    newCoverArt.src = coverArtImagePath;
+
+    return newCoverArt;
+}
+
