@@ -233,3 +233,7 @@
     row-gap: 1rem;
 }
 
+/* Heading and label font */
+h1, h2, h3, label {
+    font-family: "Manrope";
+}
