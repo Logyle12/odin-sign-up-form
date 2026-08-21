@@ -171,3 +171,23 @@
     width: 100%;
 }
 
+/* Stacks the heading and tagline */
+.content-intro {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.65rem;
+}
+
+/* Aligns the logo with the title */
+.content-header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.65rem;
+}
+
+/* Sign up page title styling */
+#content-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;;
