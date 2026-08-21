@@ -43,3 +43,21 @@ function createCoverArt(coverArtImagePath) {
     return newCoverArt;
 }
 
+// Marks a cover art filename as used for this cycle
+function recordUsedCoverArt(coverArtFilename) {
+    // Re-check what's currently available
+    const availableCoverArt = getAvailableCoverArt();
+
+    // Only record if there's still room left this cycle
+    if (usedCoverArt.length < TOTAL_COVER_ART) {
+        // Find the matching cover art for this filename
+        const matchedCoverArtFilename = availableCoverArt.find((coverArtEntry) => {
+            const entryFilename = coverArtEntry["Cover Art"];
+            return coverArtFilename.includes(entryFilename);
+        })["Cover Art"];
+        
+        // Add it to the used list
+        usedCoverArt.push(matchedCoverArtFilename);
+    }
+}
+
