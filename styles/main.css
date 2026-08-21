@@ -246,3 +246,9 @@ h1, h2, h3, label {
     row-gap: 1rem;
 }
 
+/* Field label styling */
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
