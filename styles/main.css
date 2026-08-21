@@ -155,3 +155,19 @@
     border-bottom-right-radius: 28px;
 }
 
+/* Shared layout for the content and hero inner wrappers */
+.content-wrapper, .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1.5rem;
+    width: 75.5%;
+    height: 100%;
+    padding: 1.85rem 0px;
+}
+
+/* Children of both wrappers fill the full width */
+.content-wrapper > *, .hero-wrapper > *{
+    width: 100%;
+}
+
