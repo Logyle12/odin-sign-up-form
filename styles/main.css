@@ -257,3 +257,10 @@ h1, h2, h3, label {
     font-weight: 550;
 }
 
+/* Inline link styling */
+.form-group p > a, #login-text  > a {
+    font-weight: 600;
+    color: var(--content-heading-text-color-secondary);
+    cursor: pointer;
+}
+
