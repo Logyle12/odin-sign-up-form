@@ -83,3 +83,18 @@ function getRandomCoverArt() {
     return coverArt;
 }
 
+// Fills every column with a random cover art image on load
+function initializeCollage() {
+    // Go through every column
+    allColumns.forEach(column => {
+        // Get existing image elements in the column
+        const collageImages = Array.from(column.children);
+        // Swap each one's source for a random cover
+        collageImages.forEach(collageImage => {
+            const newCoverArt = getRandomCoverArt();
+            collageImage.src = newCoverArt.src;
+        })
+    });
+    
+}
+
