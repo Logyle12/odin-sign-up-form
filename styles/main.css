@@ -226,3 +226,10 @@
     background-clip: text;
 }
 
+/* Stacks the form fields */
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
