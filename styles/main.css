@@ -311,3 +311,9 @@ h1, h2, h3, label {
     z-index: 1;
 }
 
+/* Helper text under an input */
+.input-helper {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
