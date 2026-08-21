@@ -376,3 +376,16 @@ input[type="checkbox"]#terms-and-conditions {
     vertical-align: text-top;
 }
 
+/* Checkbox background once checked */
+input[type="checkbox"]:checked#terms-and-conditions {
+    background-color: var(--content-heading-text-color-secondary);
+}
+
+/* Checkmark icon shown once checked */
+input[type="checkbox"]:checked::after {
+    content: url("../UI Icons/Input\ Icons/checkmark-vector-icon.svg");
+    top: -2px;
+    left: 3.25px;
+    position: absolute;
+}
+
