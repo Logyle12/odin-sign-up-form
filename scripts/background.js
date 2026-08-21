@@ -61,3 +61,25 @@ function recordUsedCoverArt(coverArtFilename) {
     }
 }
 
+// Picks a random unused cover art and builds its image element
+function getRandomCoverArt() {
+    // Get cover art still available 
+    const coverArtArray = getAvailableCoverArt();
+
+    // Random index into the available list
+    const coverArtIndex = Math.floor(Math.random() * (coverArtArray.length - 1));
+
+    const coverArtFilename = coverArtArray[coverArtIndex]["Cover Art"];
+    
+    // Mark it as used
+    recordUsedCoverArt(coverArtFilename);
+
+    // Full path to the image file
+    const coverArtImagePath = `../UI Images/Video Game Cover Art/${coverArtFilename}`;
+
+    // Build the image element
+    const coverArt = createCoverArt(coverArtImagePath);
+
+    return coverArt;
+}
+
