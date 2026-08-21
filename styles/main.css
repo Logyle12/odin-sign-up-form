@@ -541,3 +541,10 @@ input[type="checkbox"]:checked::after {
     border-radius: 25px;
 }
 
+/* Accent line next to each feature icon */
+.vertical-line {
+    width: 4px;
+    border-radius: 28px;
+    height: 92.5%;
+}
+
