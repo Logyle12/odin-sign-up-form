@@ -325,3 +325,18 @@ input {
     outline: none;
 }
 
+/* Text input field styling */
+input.form-control {
+    width: 100%;
+    height: 2.8125rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    border: 1.5px solid var(--input-border-color);
+    border-radius: 6px;
+    background-color: var(--input-fileds-background);
+    color: var(--input-text-color);
+    box-shadow: inset 0 0 0 0.5px var(--input-inset-border-color);
+    font-size: 1rem;
+}
+
