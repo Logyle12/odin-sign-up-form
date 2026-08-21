@@ -269,3 +269,19 @@ h1, h2, h3, label {
     text-decoration: underline;
 }
 
+/* Centers the divider line */
+.horizontal-line-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divider line styling */
+.horizontal-line {
+    border: 0;
+    width: 96.75%;
+    outline:  0.25px solid var(--content-text-color-primary);
+    border-radius: 28px;
+    opacity: 0.3;
+}
+
