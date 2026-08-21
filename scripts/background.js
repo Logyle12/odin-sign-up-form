@@ -98,5 +98,41 @@ function initializeCollage() {
     
 }
 
+// Scrolls a column and recycles the top image once it's fully scrolled past
+function scrollCollage(column) {
+
+   // Nudge the scroll position down
+   column.scrollTop += 0.5;
+
+    // Get image currently at the top of the column
+    let topImageElement = column.firstElementChild;
+
+    // Get that image's on screen size and position
+    const boundingRect = topImageElement.getBoundingClientRect();
+
+    // Look through the bounding rect's properties
+    for (const propertyName in boundingRect) {
+
+        // Only height is actually needed here
+        if (propertyName == "height") {
+       
+            const elementHeight = boundingRect["height"];
+
+            // Once image height is out of frame recycle the image
+            if (Math.round(Math.abs(column.scrollTop)) % Math.round(Math.abs(elementHeight)) == 0) {
+                // Remove the image that's scrolled out of view
+                topImageElement.remove();
+
+                // Pick a new random cover art
+                const newCoverArt = getRandomCoverArt();
+
+                // Add it to the bottom of the column
+                column.append(newCoverArt);
+            }
+        }
+
+    }
+}
+
 // Fill every column on load
 initializeCollage();
