@@ -7,3 +7,6 @@ const TOTAL_COVER_ART = coverArtData.length;
 // Every scrolling column in the collage
 const allColumns = document.querySelectorAll('.collage-column');
 
+// Cover art already shown 
+let usedCoverArt = [];
+
