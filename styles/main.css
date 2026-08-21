@@ -340,3 +340,11 @@ input.form-control {
     font-size: 1rem;
 }
 
+/* Placeholder text styling */
+input.form-control::placeholder {
+    color: var(--input-text-color);
+    font-family: "Manrope";
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
