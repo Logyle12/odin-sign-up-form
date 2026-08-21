@@ -434,6 +434,12 @@ input[type="checkbox"]:checked::after {
                 border 0.45s 0.05s ease-in-out;
 }
 
+/* Button pressed state */
+#sign-up-button:active {
+    transform: scale(0.99) translateY(-2px);
+}
+
+
 /* Text gradient shift on hover */
 #sign-up-button:hover #sign-up-button-text {
     background-position: left;
