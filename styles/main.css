@@ -208,3 +208,8 @@
     line-height: 3rem;
 }
 
+/* Limits the description to a readable line length */
+#content-description {
+    width: 28ch;
+}
+
