@@ -459,3 +459,10 @@ input[type="checkbox"]:checked::after {
                 background-size 0.45s 0.05s ease-in-out;
 }
 
+/* Centers the login link row */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
