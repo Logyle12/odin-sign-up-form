@@ -135,3 +135,12 @@
     align-items: center;
 }
 
+/* Left half background and divider */
+.sign-up-content {
+    background: linear-gradient(to bottom right, var(--sign-up-content-bg-color-start), 
+                                                var(--sign-up-content-bg-color-stop));
+
+    border-right: 0.25px solid var(--sign-up-card-border-color-stop);
+    width: 50%;
+}
+
