@@ -608,3 +608,27 @@ input[type="checkbox"]:checked::after {
     height: 1.75rem;
 }
 
+/* Stacks the feature title and description */
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    width: 85%;
+}
+
+/* Feature title styling */
+.feature-title {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: rgb(from var(--sign-up-button-text-color) r g b/ 0.8);
+}
+
+/* Feature description styling */
+.feature-description {
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-wrap: balance;
+    color: var(--content-text-color-primary);
+}
