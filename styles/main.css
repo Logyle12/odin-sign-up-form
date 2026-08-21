@@ -76,6 +76,7 @@
     --feature-icon-row-bg: #071238;
 }
 
+/* Reset default spacing and box model */
 * {
     margin: 0;
     padding: 0;
