@@ -136,3 +136,6 @@ function scrollCollage(column) {
 
 // Fill every column on load
 initializeCollage();
+
+// Keep columns scrolling, checking for a recycle every 12ms
+setInterval(() => allColumns.forEach(scrollCollage), 12);
