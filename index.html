@@ -37,13 +37,44 @@
                                 <p id="content-description">Create an account to get started. Your library and activity will be saved to your profile.</p>
                             </div>
                         </section>
-                        <form class="sign-up-form" action="" method="POST">
-                            <div class="form-group">
-                                <label for="username">USERNAME</label>
-                                <div class="input-wrapper">
-                                    <img src="UI Icons/Input Icons/username_icon.svg" class="input-icon" id="username-icon" alt="User avatar icon to repersent username input">
-                                    <input type="text" class="form-control" id="username" name="user_name" placeholder="Enter your username">
-                                    <p class="input-helper">A-Z, 0-9, and underscores only.</p>
+                            <section class="user-info">
+                                <div class="form-group">
+                                    <label for="username">
+                                        Username
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <img src="UI Icons/Input Icons/username-icon.svg" class="input-icon" id="username-icon" alt="User avatar icon to repersent username input">
+                                        <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            id="username" name="user_name" 
+                                            placeholder="Enter your username" 
+                                            autocomplete="off" 
+                                            minlength="3" 
+                                            maxlength="30"
+                                            pattern="(?=.*[A-Za-z])(?=.*[0-9])(?!.*[^A-Za-z0-9_])[A-Za-z0-9_]{3,30}" 
+                                            required>
+                                        <section class="requirements" id="username-requirements">
+                                            <section class="requirements-list">
+                                                <div class="requirement-item">
+                                                    <p class="requirement username-requirement" 
+                                                        id="username-requirement-length"
+                                                        data-regex=".{3,30}">
+                                                        3-30 characters
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                                <div class="requirement-item">
+                                                    <p class="requirement username-requirement" 
+                                                        id="username-requirement-letters"
+                                                        data-regex="(?=.*[A-Za-z])(?=.*[0-9])(?!.*[^A-Za-z0-9_])[A-Za-z0-9_]+">
+                                                        Letters, numbers and underscores only
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                            </div>
+                                        </section>
+                                    </section>
+                                    </div>
                                 </div>
                                 <div class="horizontal-line-wrapper">
                                     <hr class="horizontal-line">
