@@ -105,8 +105,17 @@
                                             maxlength="128"
                                             pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,128}$" 
                                             required>
-                                </div>
-                            </div>
+                                        <section class="password-strength">
+                                            <div class="password-strength-meter">
+                                                <div class="strength-segment" id="strength-segment-1"></div>
+                                                <div class="strength-segment" id="strength-segment-2"></div>
+                                                <div class="strength-segment" id="strength-segment-3"></div>
+                                                <div class="strength-segment" id="strength-segment-4"></div>
+                                            </div>
+                                            <div class="strength-label-wrapper">
+                                                <p id="strength-label"></p>
+                                            </div>
+                                        </section>
                             <div class="form-group">
                                 <section class="sign-up-legal">
                                     <p>I am at least 16 years old and accept the <a id="terms-and-conditions-link">Terms & Conditions</a>.</p>
