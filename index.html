@@ -114,7 +114,47 @@
                                             </div>
                                             <div class="strength-label-wrapper">
                                                 <p id="strength-label"></p>
-                                            </div>
+                                        <section class="requirements" id="password-requirements">
+                                            <section class="requirements-list">
+                                                <div class="requirement-item">
+                                                    <p class="requirement password-requirement"
+                                                        id="password-requirement-length" 
+                                                        data-regex=".{8,128}">
+                                                        At least 8 characters
+                                                     </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                                <div class="requirement-item">
+                                                    <p class="requirement password-requirement character-requirement" 
+                                                        id="password-requirement-uppercase" 
+                                                        data-regex="[A-Z]">
+                                                        One uppercase letter
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                                <div class="requirement-item">
+                                                    <p class="requirement password-requirement character-requirement" 
+                                                        id="password-requirement-lowercase" 
+                                                        data-regex="[a-z]">
+                                                        One lowercase letter    
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                                <div class="requirement-item">
+                                                    <p class="requirement password-requirement character-requirement" 
+                                                        id="password-requirement-number" 
+                                                        data-regex="[0-9]">
+                                                        One number
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                                <div class="requirement-item">
+                                                    <p class="requirement password-requirement character-requirement"           id="password-requirement-special-character" data-regex="[!@#$%^&*]">
+                                                        One special character (!@#$%^&*)
+                                                    </p>
+                                                    <img src="" alt="" class="requirement-icon">
+                                                </div>
+                                            </section>
                                         </section>
                             <div class="form-group">
                                 <section class="sign-up-legal">
