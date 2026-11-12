@@ -94,24 +94,17 @@
                                             required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">PASSWORD</label>
-                                <div class="input-wrapper">
-                                    <img src="UI Icons/Input Icons/password_icon.svg" class="input-icon" id="password-icon" alt="Padlock icon to repersent password input">
-                                    <input type="password" class="form-control" id="password" name="user_password" placeholder="Create a password">
-                                    <p class="input-helper">Minimum of 6 characters.</p>
-                                    <img src="UI Icons/Input Icons/reveal_password_icon.svg" class="input-icon" id="reveal-password-icon" alt="Open eye symbol to repersent password reveal button">
-                                </div>
-                                <div class="horizontal-line-wrapper">
-                                    <hr class="horizontal-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">EMAIL</label>
-                                <div class="input-wrapper">
-                                    <img src="UI Icons/Input Icons/email_icon.svg" class="input-icon" id="email-icon" alt="Email message icon to repersent emal input">
-                                    <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email">
+                                        <input 
+                                            type="password" 
+                                            class="form-control" 
+                                            id="password" 
+                                            name="user_password" 
+                                            placeholder="Enter your password" 
+                                            autocomplete="new-password" 
+                                            minlength="8" 
+                                            maxlength="128"
+                                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,128}$" 
+                                            required>
                                 </div>
                             </div>
                             <div class="form-group">
