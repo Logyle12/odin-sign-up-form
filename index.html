@@ -161,6 +161,35 @@
                                         <img src="UI Icons/Input Icons/reveal-password-icon-off-gray.svg" class="input-icon reveal-password-icon" alt="Open eye symbol to repersent password reveal button">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">
+                                        Confirm Password
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <img src="UI Icons/Input Icons/password-icon.svg" class="input-icon" id="password-icon" alt="Padlock icon to repersent password input">
+                                        <input 
+                                            type="password" 
+                                            class="form-control" 
+                                            id="confirm-password" 
+                                            name="confirmed_user_password" 
+                                            placeholder="Re-enter your password" 
+                                            autocomplete="new-password" 
+                                            minlength="8" 
+                                            maxlength="128" 
+                                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,128}$"
+                                            required disabled>
+                                        <section id="password-match-requirement">
+                                            <div class="password-match-status-wrapper">
+                                                <p id="password-match-status">
+                                                    Passwords match
+                                                </p>
+                                                <img src="" alt=""  id="password-match-icon">
+                                            </div>
+                                        </section>
+                                        <img src="UI Icons/Input Icons/reveal-password-icon-off-gray.svg" class="input-icon reveal-password-icon" alt="Open eye symbol to repersent password reveal button">
+                                    </div>
+                                </div>
+                            </section>
                             <div class="form-group">
                                 <section class="sign-up-legal">
                                     <p>I am at least 16 years old and accept the <a id="terms-and-conditions-link">Terms & Conditions</a>.</p>
