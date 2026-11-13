@@ -25,3 +25,14 @@ const passwordMatchStatus = document.querySelector('#password-match-status');
 
 /** @type {NodeListOf<HTMLElement>} */
 const revealPasswordIcons = document.querySelectorAll('.reveal-password-icon');
+
+// -----------------------------------------------------------------------------
+// 2. CONFIGURATION & CONSTANTS
+// -----------------------------------------------------------------------------
+
+//Extra points for using several character classes (upper, lower, number, symbol).
+const CHARACTER_CLASS_BONUSES = {
+    twoClasses:   { classCount: 2, points: 5 },
+    threeClasses: { classCount: 3, points: 12 },
+    fourClasses:  { classCount: 4, points: 20 },
+};
