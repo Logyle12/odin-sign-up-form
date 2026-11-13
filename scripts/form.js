@@ -36,3 +36,50 @@ const CHARACTER_CLASS_BONUSES = {
     threeClasses: { classCount: 3, points: 12 },
     fourClasses:  { classCount: 4, points: 20 },
 };
+
+// Meter appearance for each score range. 
+
+const STRENGTH_TIERS = {
+    EMPTY_METER: {
+        scoreRange: [0, 100],
+        color: "#263653",
+        label: "",
+        segmentCount: 4
+    },
+    VERY_WEAK: {
+        scoreRange: [1, 19],
+        color: "#FF4D6D",
+        label: "Very Weak",
+        segmentCount: 1
+    },
+    WEAK: {
+        scoreRange: [20, 39],
+        color: "#FFB347",
+        label: "Weak",
+        segmentCount: 2
+    },
+    MEDIUM: {
+        scoreRange: [40, 59],
+        color: "#FFD166",
+        label: "Medium",
+        segmentCount: 3
+    },
+    GOOD: {
+        scoreRange: [60, 79],
+        color: "#ADFF2F",
+        label: "Good",
+        segmentCount: 3
+    },
+    STRONG: {
+        scoreRange: [80, 99],
+        color: "#87E665",
+        label: "Strong",
+        segmentCount: 4
+    },
+    VERY_STRONG: {
+        scoreRange: [100, 100],
+        color: "#4ADE80",
+        label: "Very Strong",
+        segmentCount: 4
+    }
+};
