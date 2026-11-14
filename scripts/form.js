@@ -521,3 +521,22 @@ function calculateRepetitionPenalty(password) {
 
     return repetitionPenalty;
 }
+
+// -----------------------------------------------------------------------------
+// 6. STRENGTH SCORING: TOTALS
+// -----------------------------------------------------------------------------
+
+/** @param {string} password */
+function calculateBonusTotal(password) {
+    let bonusTotal = 0;
+
+    bonusTotal += calculateLengthScore(password);
+    bonusTotal += calculateCharacterClassBonus();
+    bonusTotal += calculateInteriorBonus(password);
+    bonusTotal += calculateDelimiterBonus(password);
+    bonusTotal += calculateUniquenessBonus(password);
+
+    console.log("Bonus Total: " + bonusTotal);
+
+    return bonusTotal;
+}
