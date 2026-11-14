@@ -442,3 +442,38 @@ function calculateDatePenalty(password) {
 
     return penalty;
 }
+
+/**
+ * Penalty for predictable structure: a single leading capital, and digits or
+ * symbols tacked onto the last three characters only.
+ * @param {string} password
+ */
+function calculateLazyStructurePenalty(password) {
+    let penalty = 0;
+
+    const hasLeadingCapital = /^[A-Z][^A-Z]*$/.test(password);
+
+    const passwordBody = password.slice(0, password.length - 3);
+
+    const passwordTail = password.slice(password.length - 3);
+
+    const bodyHasDigitOrSymbol = DIGIT_OR_SYMBOL_PATTERN.test(passwordBody);
+
+    const tailHasDigitOrSymbol = DIGIT_OR_SYMBOL_PATTERN.test(passwordTail);
+
+    if (hasLeadingCapital) {
+        penalty += 10;
+    }
+
+    if (!bodyHasDigitOrSymbol && tailHasDigitOrSymbol) {
+        penalty += 15;
+
+        if (hasLeadingCapital) {
+            penalty += 10;
+        }
+    }
+
+    console.log("Penalty (Lazy Structure): " + penalty);
+
+    return penalty;
+}
