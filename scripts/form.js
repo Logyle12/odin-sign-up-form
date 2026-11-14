@@ -94,3 +94,24 @@ const KEYBOARD_ROWS = [NUMBER_ROW, TOP_ROW, HOME_ROW, BOTTOM_ROW];
 // Matches a single digit or one of the allowed special characters. 
 const DIGIT_OR_SYMBOL_PATTERN = /[0-9!@#$%^&*]/;
 
+// -----------------------------------------------------------------------------
+// 3. SHARED STRING HELPERS
+// -----------------------------------------------------------------------------
+
+/**
+ * @param {string} password
+ * @returns {string[]} 
+ */
+function getUniqueCharacters(password) {
+    const uniqueCharacters = [];
+
+    for (let characterIndex = 0; characterIndex < password.length; characterIndex++) {
+        const character = password[characterIndex];
+
+        if (!uniqueCharacters.includes(character)) {
+            uniqueCharacters.push(character);
+        }
+    }
+
+    return uniqueCharacters;
+}
