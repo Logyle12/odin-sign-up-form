@@ -390,3 +390,55 @@ function calculatePronounceabilityPenalty(password) {
 
     return penalty;
 }
+
+/**
+ * Penalty for a four-digit group that looks like a year (1900-2099) or a
+ * day/month pair (DDMM or MMDD). Applied at most once.
+ * @param {string} password
+ */
+function calculateDatePenalty(password) {
+    let penalty = 0;
+    const fourDigitMatches =
+        Array.from(password.matchAll(/\d{4}/g));
+
+    let hasDatePenalty = false;
+
+    for (const match of fourDigitMatches) {
+        if (hasDatePenalty) break;
+
+        const fourDigitText = match[0];
+        const fourDigitNumber = parseInt(fourDigitText, 10);
+        const firstPair = parseInt(
+            fourDigitText.slice(0, 2),
+            10
+        );
+        const secondPair = parseInt(
+            fourDigitText.slice(2, 4),
+            10
+        );
+
+        const isYear =
+            fourDigitNumber >= 1900 && fourDigitNumber <= 2099;
+
+        const isDayMonth =
+            firstPair >= 1 &&
+            firstPair <= 31 &&
+            secondPair >= 1 &&
+            secondPair <= 12;
+
+        const isMonthDay =
+            firstPair >= 1 &&
+            firstPair <= 12 &&
+            secondPair >= 1 &&
+            secondPair <= 31;
+
+        if (isYear || isDayMonth || isMonthDay) {
+            penalty += 15;
+            hasDatePenalty = true;
+        }
+    }
+
+    console.log("Penalty (Date): " + penalty);
+
+    return penalty;
+}
