@@ -196,3 +196,19 @@ function calculateDelimiterBonus(password) {
 
     return 0;
 }
+
+/**
+ * Bonus when every character is different (10+ characters).
+ * @param {string} password
+ */
+function calculateUniquenessBonus(password) {
+    const uniqueCharacters = getUniqueCharacters(password);
+    const uniqueCharacterRatio =
+        uniqueCharacters.length / password.length;
+
+    if (uniqueCharacterRatio === 1 && password.length >= 10) {
+        return 10;
+    }
+
+    return 0;
+}
