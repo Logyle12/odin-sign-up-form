@@ -773,3 +773,20 @@ function handleConfirmPasswordInput(event) {
 
     validatePasswordMatch(event.target);
 }
+
+/* Toggles a reveal-password icon and shows/hides its input's text. */
+function togglePasswordVisibility(event) {
+    const revealIcon = event.target;
+
+    const targetInput = revealIcon.parentElement.querySelector('input');
+
+    if (!revealIcon.classList.contains('on')) {
+        revealIcon.classList.add('on');
+        targetInput.type = "text";
+    }
+
+    else {
+        revealIcon.classList.remove('on');
+        targetInput.type = "password";
+    }
+}
