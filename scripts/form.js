@@ -575,3 +575,41 @@ function calculatePasswordScore(password) {
 
     return rawScore;
 }
+
+// -----------------------------------------------------------------------------
+// 7. STRENGTH METER RENDERING
+// -----------------------------------------------------------------------------
+
+/** @param {number} rawScore */
+function renderStrengthMeter(rawScore) {
+
+    const clampedScore = passwordInput.value.length > 0 ? Math.min(100, Math.max(1, rawScore)) : 0;
+
+    console.log("Clamped Score: " + clampedScore);
+
+    for (const [tierKey, tier] of Object.entries(STRENGTH_TIERS)) {
+        const [lowestScore, highestScore] = tier.scoreRange;
+
+        console.log("Tier Key: " + tierKey);
+
+        if (clampedScore >= lowestScore && clampedScore <= highestScore) {
+            for (let segmentIndex = 0; segmentIndex < tier.segmentCount; segmentIndex++) {
+                const segment = strengthMeterSegments[segmentIndex];
+
+                console.log("Segment: ");
+                console.log(segment);
+
+                console.log("Tier: " + tier);
+                console.log("Color: " + tier.color);
+
+                if (segment.style.backgroundColor !== tier.color) {
+                    segment.style.backgroundColor = tier.color;
+                }
+
+                if (strengthLabel.textContent !== tier.label) {
+                    strengthLabel.textContent = tier.label;
+                }
+            }
+        }
+    }
+}
