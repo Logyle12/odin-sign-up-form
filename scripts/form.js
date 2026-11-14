@@ -630,3 +630,36 @@ function updateStrengthLabelVisibility(password) {
         strengthLabel.classList.add('active');
     }
 }
+
+// -----------------------------------------------------------------------------
+// 8. REQUIREMENT PILLS (username & password)
+// -----------------------------------------------------------------------------
+
+/**
+ * Marks one requirement pill 'valid' or 'invalid' based on its data-regex.
+ * @param {HTMLElement} requirementElement
+ * @param {string} inputValue
+ */
+function updateRequirementState(requirementElement, inputValue) {
+    const requirementRegex = new RegExp(requirementElement.dataset.regex);
+
+    const isRequirementValid = requirementRegex.test(inputValue);
+
+    const validationState = isRequirementValid ? 'valid' : 'invalid';
+
+    const requirementClasses = requirementElement.classList;
+
+    console.log("Classes: " + requirementClasses);
+
+    if (!requirementClasses.contains(validationState)) {
+        const currentClassName = requirementElement.className;
+
+        if (currentClassName.includes('valid')) {
+            requirementClasses.remove(
+                currentClassName.split(" ").at(-1)
+            );
+        }
+
+        requirementClasses.toggle(validationState);
+    }
+}
