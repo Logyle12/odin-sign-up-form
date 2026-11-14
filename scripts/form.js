@@ -147,3 +147,24 @@ function calculateLengthScore(password) {
 
     return lengthScore;
 }
+
+function calculateCharacterClassBonus() {
+    const classCount = document.querySelectorAll('.character-requirement.valid').length;
+    let classBonus = 0;
+
+    console.log("Class Count: " + classCount);
+
+    if (classCount > 1) {
+        for (const bonusRule of Object.values(CHARACTER_CLASS_BONUSES)) {
+            console.log(bonusRule);
+
+            if (bonusRule.classCount === classCount) {
+                classBonus += bonusRule.points;
+
+                console.log("Character Class Bonus: " + classBonus);
+            }
+        }
+    }
+
+    return classBonus;
+}
