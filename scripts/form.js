@@ -364,3 +364,29 @@ function calculateKeyboardWalkPenalty(password) {
 
     return penalty;
 }
+
+/**
+ * Penalty for letter-only passwords that alternate vowels and consonants
+ * (easy-to-pronounce words).
+ * @param {string} password
+ */
+function calculatePronounceabilityPenalty(password) {
+    let penalty = 0;
+
+    if (/^[A-Za-z]+$/.test(password)) {
+        const hasConsecutiveVowels =
+            /([aeiou]|(?<=\w)y){2}/i.test(password);
+
+        const hasConsecutiveConsonants =
+            /([^aeiouy]|^y){2}/i.test(password);
+
+        if (!hasConsecutiveVowels && !hasConsecutiveConsonants) {
+            penalty += 20;
+            return penalty;
+        }
+    }
+
+    console.log("Penalty (Pronounceability): " + penalty);
+
+    return penalty;
+}
