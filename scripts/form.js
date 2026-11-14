@@ -83,3 +83,14 @@ const STRENGTH_TIERS = {
         segmentCount: 4
     }
 };
+
+// US QWERTY rows used to detect keyboard walks (e.g. "qwe", "asd").
+const NUMBER_ROW = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+const TOP_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
+const HOME_ROW = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+const BOTTOM_ROW = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
+const KEYBOARD_ROWS = [NUMBER_ROW, TOP_ROW, HOME_ROW, BOTTOM_ROW];
+
+// Matches a single digit or one of the allowed special characters. 
+const DIGIT_OR_SYMBOL_PATTERN = /[0-9!@#$%^&*]/;
+
