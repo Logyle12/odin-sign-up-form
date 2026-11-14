@@ -704,3 +704,20 @@ function showPasswordsDoNotMatch() {
         passwordMatchStatus.classList.add("error");
     }
 }
+
+/**
+ * Compares the confirm field to the password. Sets the field's custom validity
+ * (so checkValidity() fails on a mismatch) and updates the match status pill.
+ * @param {HTMLInputElement} confirmInput
+ */
+function validatePasswordMatch(confirmInput) {
+    if (confirmInput.value === passwordInput.value) {
+        confirmInput.setCustomValidity("");
+        showPasswordsMatch();
+    }
+
+    else {
+        confirmInput.setCustomValidity("Please Enter The CorrecT Password.");
+        showPasswordsDoNotMatch();
+    }
+}
