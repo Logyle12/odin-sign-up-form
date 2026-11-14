@@ -477,3 +477,47 @@ function calculateLazyStructurePenalty(password) {
 
     return penalty;
 }
+
+/**
+ * Penalty for repeated characters; grows quadratically with the repeat count.
+ * @param {string} password
+ */
+function calculateRepetitionPenalty(password) {
+    const characterStack = [];
+    const characterCounts = Object.create(null);
+
+    for (const character of password) {
+        characterCounts[character] = (characterCounts[character] ?? 1);
+
+        // console.log("Character: " + character);
+        // console.log("Stack: ");
+        // console.table(characterStack);
+
+        if (character === characterStack[characterStack.length - 1]) {
+            characterCounts[character] += 1;
+
+            // console.log("Charcter Counts: ");
+            // console.table(characterCounts);
+        }
+
+        characterStack.push(character);
+    }
+
+    const repetitionPenalty = Object.values(characterCounts)
+        .reduce((runningPenalty, characterCount) => {
+            if (characterCount > 1) {
+                const characterPenalty = 2 * Math.pow(characterCount, 2);
+
+                // console.log("Character Penalty: " + characterPenalty);
+
+                return runningPenalty + characterPenalty;
+            }
+
+            return runningPenalty;
+        }, 0);
+
+
+    console.log("Penalty (Repetition): " + repetitionPenalty);
+
+    return repetitionPenalty;
+}
