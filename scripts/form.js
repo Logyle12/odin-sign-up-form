@@ -540,3 +540,22 @@ function calculateBonusTotal(password) {
 
     return bonusTotal;
 }
+
+/**
+ * @param {string} password
+ * @returns {number} zero or negative
+ */
+function calculatePenaltyTotal(password) {
+    let penaltyTotal = 0;
+
+    penaltyTotal -= calculateKeyboardWalkPenalty(password);
+    penaltyTotal -= calculateSequentialRunPenalty(password);
+    penaltyTotal -= calculatePronounceabilityPenalty(password);
+    penaltyTotal -= calculateDatePenalty(password);
+    penaltyTotal -= calculateLazyStructurePenalty(password);
+    penaltyTotal -= calculateRepetitionPenalty(password);
+
+    console.log("Penalty Total: " + penaltyTotal);
+
+    return penaltyTotal;
+}
