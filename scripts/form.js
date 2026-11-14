@@ -729,3 +729,26 @@ function validatePasswordMatch(confirmInput) {
 function handleUsernameInput(event) {
     updateRequirements(event.target);
 }
+
+function handlePasswordInput(event) {
+    const password = event.target.value;
+
+    updateRequirements(event.target);
+    updateStrengthLabelVisibility(password);
+
+    if (confirmPasswordInput.value.length > 1) {
+        validatePasswordMatch(confirmPasswordInput);
+    }
+
+    else {
+        if (event.target.checkValidity()) {
+            confirmPasswordInput.disabled = false;
+        }
+    
+        else {
+            confirmPasswordInput.disabled = true;
+        }
+    }
+
+    updateStrengthMeter(password);
+}
