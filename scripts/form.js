@@ -686,3 +686,21 @@ function updateRequirements(input) {
         updateRequirementState(requirementElement, inputValue);
     });
 }
+
+// -----------------------------------------------------------------------------
+// 9. PASSWORD MATCH STATUS (confirm password)
+// -----------------------------------------------------------------------------
+
+function showPasswordsMatch() {
+    if (!passwordMatchStatus.classList.contains("success")) {
+        passwordMatchStatus.textContent = "Passwords match!";
+        passwordMatchStatus.classList.add("success");
+    }
+}
+
+function showPasswordsDoNotMatch() {
+    if (!passwordMatchStatus.classList.contains("error")) {
+        passwordMatchStatus.textContent = "Passwords do not match!";
+        passwordMatchStatus.classList.add("error");
+    }
+}
