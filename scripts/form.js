@@ -115,3 +115,35 @@ function getUniqueCharacters(password) {
 
     return uniqueCharacters;
 }
+
+// -----------------------------------------------------------------------------
+// 4. STRENGTH SCORING: BONUSES
+// -----------------------------------------------------------------------------
+
+/** @param {string} password */
+function calculateLengthScore(password) {
+    const uniqueCharacters = getUniqueCharacters(password);
+
+    console.log("Unique Characters: ");
+    console.table(uniqueCharacters);
+    console.log("");
+
+    const effectiveLength = Math.sqrt(
+        password.length * uniqueCharacters.length
+    );
+
+    const lengthMultiplier = password.length < 8 ? 0
+        : password.length <= 11 ? 3
+        : password.length <= 15 ? 5
+        : 6.5;
+
+    const lengthScore = effectiveLength * lengthMultiplier;
+
+    console.log("Unique Characters Count: " + uniqueCharacters.length);
+    console.log("Password Length: " + password.length);
+    console.log("Effective Length: " + effectiveLength);
+    console.log("Length Multiplier: " + lengthMultiplier);
+    console.log("Length Score: " + lengthScore);
+
+    return lengthScore;
+}
