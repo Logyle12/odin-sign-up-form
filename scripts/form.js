@@ -613,3 +613,9 @@ function renderStrengthMeter(rawScore) {
         }
     }
 }
+
+/** @param {string} password */
+function updateStrengthMeter(password) {
+    const rawScore = calculatePasswordScore(password);
+    renderStrengthMeter(rawScore);
+}
