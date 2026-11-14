@@ -256,3 +256,58 @@ function calculateSequentialRunPenalty(password) {
 
     return penalty;
 }
+
+/**
+ * Finds the keys physically next to 'key' on the keyboard.
+ * @param {string} key
+ * @returns {Object<string, string[]> | undefined} undefined if the key isn't on the map
+ */
+function getAdjacencyMap(key) {
+    console.log("Key: " + key);
+    console.table(KEYBOARD_ROWS);
+
+    const rowIndex = KEYBOARD_ROWS.findIndex((keyboardRow) => {
+        return keyboardRow.includes(key);
+    });
+    console.log("Row Index: " + rowIndex);
+
+    if (rowIndex === -1) {
+        return undefined;
+    }
+
+    const currentRow = KEYBOARD_ROWS[rowIndex];
+
+    const columnIndex = currentRow.indexOf(key);
+
+    const adjacentRows = [
+        KEYBOARD_ROWS[rowIndex - 1],
+        KEYBOARD_ROWS[rowIndex + 1]
+    ].filter((candidateRow) => candidateRow !== undefined);
+
+    console.log('Adjacent Row:');
+    console.table(adjacentRows);
+
+    const adjacencyMap = Object.create(null);
+    const adjacentKeys = [currentRow[columnIndex - 1], currentRow[columnIndex + 1]];
+
+    adjacentRows.forEach((adjacentRow, adjacentRowIndex) => {
+        console.log('Row: ' + adjacentRow);
+
+        adjacentKeys.push(adjacentRow[columnIndex]);
+
+        if (adjacentRowIndex < rowIndex && adjacentRow.length !== 7) {
+            adjacentKeys.push(adjacentRow[columnIndex + 1]);
+        } else {
+            adjacentKeys.push(adjacentRow[columnIndex - 1]);
+        }
+    });
+
+    adjacencyMap[key] = adjacentKeys.filter(
+        (adjacentKey) => adjacentKey !== undefined
+    );
+
+    console.log('Adjacencies: ');
+    console.table(adjacencyMap);
+
+    return adjacencyMap;
+}
