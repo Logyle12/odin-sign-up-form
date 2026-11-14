@@ -212,3 +212,47 @@ function calculateUniquenessBonus(password) {
 
     return 0;
 }
+
+// -----------------------------------------------------------------------------
+// 5. STRENGTH SCORING: PENALTIES
+// -----------------------------------------------------------------------------
+
+/**
+ * Penalty for runs of 3+ characters with consecutive character codes ("abc", "123").
+ * @param {string} password
+ */
+function calculateSequentialRunPenalty(password) {
+    let penalty = 0;
+    let runLength = 1;
+    let runCharacters = '';
+
+    if (password.length >= 3) {
+        for (let characterIndex = 0; characterIndex < password.length - 1; characterIndex++) {
+            const currentCharacterCode = password.codePointAt(characterIndex);
+            const nextCharacterCode = password.codePointAt(characterIndex + 1);
+            const codeDifference =
+                currentCharacterCode - nextCharacterCode;
+
+            runCharacters += password[characterIndex];
+
+            if (Math.abs(codeDifference) === 1) {
+                runLength++;
+
+                if (runLength === 3) {
+                    console.log("Sequential Run: " + runCharacters);
+                    console.log("Run Length: " + runLength);
+                    penalty += 12;
+                }
+            }
+
+            else {
+                runCharacters = '';
+                runLength = 1;
+            }
+        }
+    }
+
+    console.log("Penalty (Sequential Run): " + penalty);
+
+    return penalty;
+}
