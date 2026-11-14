@@ -559,3 +559,19 @@ function calculatePenaltyTotal(password) {
 
     return penaltyTotal;
 }
+
+/** @param {string} password */
+function calculatePasswordScore(password) {
+    const bonusTotal = calculateBonusTotal(password);
+    const penaltyTotal = calculatePenaltyTotal(password);
+
+    console.log("Bonus Total: " + bonusTotal);
+    console.log("Penalty Total: " + penaltyTotal);
+
+    const rawScore = parseInt(bonusTotal) + parseInt(penaltyTotal);
+
+    console.log("Raw Score: " + rawScore);
+    console.log("");
+
+    return rawScore;
+}
