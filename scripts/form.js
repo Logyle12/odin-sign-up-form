@@ -663,3 +663,26 @@ function updateRequirementState(requirementElement, inputValue) {
         requirementClasses.toggle(validationState);
     }
 }
+
+/**
+ * @param {HTMLInputElement} input
+ */
+function updateRequirements(input) {
+    const inputValue = input.value;
+
+    const requirementElements = input.parentElement.querySelectorAll('.requirement');
+
+    requirementElements.forEach((requirementElement) => {
+        const requirementItem = requirementElement.parentElement;
+
+        if (inputValue.length < 1) {
+            requirementItem.classList.remove('active');
+        }
+
+        else if (!requirementItem.classList.contains('active')) {
+            requirementItem.classList.add('active');
+        }
+
+        updateRequirementState(requirementElement, inputValue);
+    });
+}
