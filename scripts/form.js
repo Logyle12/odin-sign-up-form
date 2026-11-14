@@ -183,3 +183,16 @@ function calculateInteriorBonus(password) {
 
     return 0;
 }
+
+/** @param {string} password */
+function calculateDelimiterBonus(password) {
+    if (/(?:[A-Za-z0-9!@#$%^&*]+[-_\s]){2}/.test(password)) {
+        const words = password.split(/[-_\s]/);
+
+        if (words.every((word) => word.length >= 3)) {
+            return 15;
+        }
+    }
+
+    return 0;
+}
