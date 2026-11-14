@@ -795,3 +795,23 @@ function togglePasswordVisibility(event) {
 function handleSignUpSubmit() {
     localStorage.setItem("username", usernameInput.value);
 }
+
+// -----------------------------------------------------------------------------
+// 11. INITIALISATION
+// -----------------------------------------------------------------------------
+
+function registerEventListeners() {
+    usernameInput.addEventListener('input', handleUsernameInput);
+    passwordInput.addEventListener('input', handlePasswordInput);
+    passwordInput.addEventListener('paste', handlePasswordInput);
+
+    confirmPasswordInput.addEventListener('input', handleConfirmPasswordInput);
+    confirmPasswordInput.addEventListener('paste', handleConfirmPasswordInput);
+
+    revealPasswordIcons.forEach((icon) => {
+        icon.addEventListener('click', togglePasswordVisibility);
+    });
+    signUpForm.addEventListener('submit', handleSignUpSubmit);
+}
+
+registerEventListeners();
