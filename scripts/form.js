@@ -721,3 +721,11 @@ function validatePasswordMatch(confirmInput) {
         showPasswordsDoNotMatch();
     }
 }
+
+// -----------------------------------------------------------------------------
+// 10. EVENT HANDLERS
+// -----------------------------------------------------------------------------
+
+function handleUsernameInput(event) {
+    updateRequirements(event.target);
+}
