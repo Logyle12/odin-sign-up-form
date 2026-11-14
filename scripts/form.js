@@ -790,3 +790,8 @@ function togglePasswordVisibility(event) {
         targetInput.type = "password";
     }
 }
+
+/* Saves the username so the sign-up-complete page can read it after the redirect. */
+function handleSignUpSubmit() {
+    localStorage.setItem("username", usernameInput.value);
+}
