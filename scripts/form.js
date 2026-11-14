@@ -752,3 +752,24 @@ function handlePasswordInput(event) {
 
     updateStrengthMeter(password);
 }
+
+function handleConfirmPasswordInput(event) {
+    const confirmPassword = event.target.value;
+
+    console.log(confirmPassword);
+    console.log(passwordInput.value);
+
+    console.log(passwordInput);
+    console.log(passwordMatchStatus.classList);
+
+    if (confirmPassword.length < 1) {
+        passwordMatchStatus.classList.remove('active');
+        return;
+    }
+
+    if (!passwordMatchStatus.classList.contains('active')) {
+        passwordMatchStatus.classList.add('active');
+    }
+
+    validatePasswordMatch(event.target);
+}
