@@ -168,3 +168,18 @@ function calculateCharacterClassBonus() {
 
     return classBonus;
 }
+
+/** @param {string} password */
+function calculateInteriorBonus(password) {
+    const interiorStart = Math.round(0.6 * password.length) - 1;
+    const interiorCharacters = password.slice(
+        interiorStart,
+        password.length - 2
+    );
+
+    if (DIGIT_OR_SYMBOL_PATTERN.test(interiorCharacters)) {
+        return 15;
+    }
+
+    return 0;
+}
