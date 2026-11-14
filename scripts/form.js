@@ -619,3 +619,14 @@ function updateStrengthMeter(password) {
     const rawScore = calculatePasswordScore(password);
     renderStrengthMeter(rawScore);
 }
+
+// Shows the strength label while the password field has text, hides it when empty.
+function updateStrengthLabelVisibility(password) {
+    if (password.length < 1) {
+        strengthLabel.classList.remove('active');
+    }
+
+    else if (!strengthLabel.classList.contains('active')) {
+        strengthLabel.classList.add('active');
+    }
+}
