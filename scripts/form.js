@@ -311,3 +311,56 @@ function getAdjacencyMap(key) {
 
     return adjacencyMap;
 }
+
+/**
+ * Penalty for typing along the keyboard ("qwe", "asd").
+ * @param {string} password
+ */
+function calculateKeyboardWalkPenalty(password) {
+    let penalty = 0;
+    let walkLength = 1;
+    let walk = '';
+
+    if (password.length >= 3) {
+        for (let characterIndex = 0; characterIndex < password.length - 1; characterIndex++) {
+            const character = password[characterIndex];
+            const nextCharacter = password[characterIndex + 1];
+            const adjacencyMap = getAdjacencyMap(character);
+
+            console.log("Adjacency Map: ");
+            console.table(adjacencyMap);
+
+            console.log("Character: " + character);
+            console.log("Next Character: " + nextCharacter);
+
+            // A character that isn't on the keyboard map ends the check
+            if (adjacencyMap === undefined) {
+                return penalty;
+            }
+
+            const adjacentKeys = Object.values(adjacencyMap).flat();
+
+            if (adjacentKeys.includes(nextCharacter)) {
+                walk += password[characterIndex];
+                walkLength++;
+
+                console.log("Keyboard Walk: " + walk);
+                console.log("Walk Length: " + walkLength);
+                console.log("");
+
+                if (walkLength === 3) {
+                    penalty += 12;
+                }
+            }
+
+            else if (walkLength > 1) {
+                walk = '';
+                walkLength = 1;
+            }
+        }
+    }
+
+    console.log("Penalty (Keyboard Walk): " + penalty);
+
+    return penalty;
+}
