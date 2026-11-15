@@ -1,0 +1,86 @@
+:root {
+    /* Main page background gradient */
+    --main-bg-color-start: #02091F;
+    --main-bg-color-middle: #061338;
+    --main-bg-color-stop: #01081E;
+
+    /* Sign up card background and border gradient */
+    --sign-up-card-color-start: #050A18;
+    --sign-up-card-color-middle: #07112A;
+    --sign-up-card-color-stop: #08153A;
+    --sign-up-card-border-color-start: #3A4664;
+    --sign-up-card-border-color-middle: #4B597B;
+    --sign-up-card-border-color-stop: #2E3D61;
+
+    /* Content and hero section background gradients */
+    --sign-up-content-bg-color-start: #050914;
+    --sign-up-content-bg-color-stop: #040813;
+    --sign-up-hero-bg-color-start: #091B58;
+    --sign-up-hero-bg-color-middle: #071743;
+    --sign-up-hero-bg-color-stop: #05112E;
+
+    /* Heading text colors */
+    --content-heading-text-color-primary: #F4F5F8;
+    --content-heading-text-color-secondary: #2D7BFF;
+    --content-heading-text-color-stop-secondary: #194bbf;
+
+    /* Body text colors */
+    --content-text-color-primary: #A8AFBF;
+    --content-text-color-secondary: #E1E5EC;
+
+    /* Form input colors */
+    --input-fields-background: #0D1429;
+    --input-fields-highlight: #121A33;
+    --input-border-color: #1B2546;
+    --input-inset-border-color: #2B3555;
+    --input-icons-color: #8A93A7;
+    --input-text-color: #7F889B;
+
+    --password-very-weak: #FF4D6D;
+    --password-weak: #FFB347;
+    --password-medium: #FFD166;
+    --password-strong: #87E665;
+    --password-very-strong: #4ADE80;
+    
+    --password-valid: #88e76e;
+    --password-invalid: #FDA4AF;
+
+    /* Sign up button hover color */
+    --sign-up-button-color-hover: #2260ca;
+
+    /* Terms and conditions checkbox and link colors */
+    --terms-and-conditions-checkbox-color: #C3C8D3;
+    --terms-and-conditions-text-color: #2D7BFF;
+
+    /* Sign up button border and text colors */
+    --sign-up-button-border-color: #3D86FF;
+    --sign-up-button-text-color: #F4F6FA;
+    --sign-up-button-text-color-hover: #DCE9FF;
+
+    /* Section title and description colors */
+    --section-titles-color: #F2F4F8;
+    --section-decsriptions-color: #B0B6C5;
+
+    /* Feature icon colors, icon one */
+    --feature-icon-circular-bg-one: #1E4DB8;
+    --feature-icon-circular-border-one: #60a5fa80;
+    --feature-icon-color-one: #60A5FA;
+
+    /* Feature icon colors, icon two */
+    --feature-icon-circular-bg-two: #7C3FA6;
+    --feature-icon-circular-border-two: #d946ef80;
+    --feature-icon-color-two: #E9A6FF;
+
+    /* Feature icon colors, icon three */
+    --feature-icon-circular-bg-three: #B8531E;
+    --feature-icon-circular-border-three: #fb923c;
+    --feature-icon-color-three: #FB923C;
+    
+    /* Feature icon colors, icon four */
+    --feature-icon-circular-bg-four: #93cf24;
+    --feature-icon-circular-border-four: #bef26480;
+    --feature-icon-color-four: #BEF264;
+
+    /* Background behind each feature row */
+    --feature-icon-row-bg: #071238;
+}
