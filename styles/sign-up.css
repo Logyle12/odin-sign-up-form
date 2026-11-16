@@ -124,3 +124,10 @@
 
 }
 
+/* Each direct child of the card takes half the width */
+.sign-up-card > * {
+    width: 50%;
+    height: 100%;
+    font-family: "Inter";
+    font-weight: 400;
+}
