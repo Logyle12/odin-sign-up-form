@@ -153,3 +153,8 @@
     border-right: 0.25px solid var(--sign-up-card-border-color-stop);
     width: 50%;
 }
+
+/* Right half width */
+.sign-up-hero {
+    width: 50%;
+}
