@@ -217,3 +217,16 @@
     font-weight: 700;
     line-height: 3rem;
 }
+
+/* Primary heading color */
+.heading-primary {
+    color: var(--content-heading-text-color-primary);
+}
+
+/* Gradient text color for the secondary heading */
+.heading-secondary {
+    color: transparent;
+    background: linear-gradient(to right, var(--content-heading-text-color-secondary),
+                                            var(--content-heading-text-color-stop-secondary));
+    background-clip: text;
+}
