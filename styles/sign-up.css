@@ -175,3 +175,8 @@
     height: 100%;
     padding: 2.5rem 4rem;
 }
+
+/* Children of both wrappers fill the full width */
+.content-wrapper > *, .hero-wrapper > *{
+    width: 100%;
+}
