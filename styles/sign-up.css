@@ -180,3 +180,10 @@
 .content-wrapper > *, .hero-wrapper > *{
     width: 100%;
 }
+
+/* Stacks the heading and tagline */
+.content-intro {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.65rem;
+}
