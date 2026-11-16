@@ -187,3 +187,11 @@
     flex-direction: column;
     row-gap: 0.65rem;
 }
+
+/* Aligns the logo with the title */
+.content-header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.65rem;
+}
+
