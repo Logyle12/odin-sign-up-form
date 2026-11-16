@@ -103,3 +103,24 @@
                                                 var(--main-bg-color-middle), 
                                                 var(--main-bg-color-stop));
 }
+
+/* Main sign up card, holds content and hero side by side */
+.sign-up-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 95%;
+    background: linear-gradient(to bottom right, var(--sign-up-card-color-start), 
+                                                var(--sign-up-card-color-middle), 
+                                                var(--sign-up-card-color-stop));
+
+    border-left: 0.95px solid var(--sign-up-card-border-color-start);
+    border-top: 0.95px solid var(--sign-up-card-border-color-middle);
+    border-bottom: 0.95px solid var(--sign-up-card-border-color-middle);
+    border-right: 0.95px solid var(--sign-up-card-border-color-stop);
+    color: var(--content-text-color-primary);
+
+}
+
