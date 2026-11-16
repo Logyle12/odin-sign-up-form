@@ -230,3 +230,17 @@
                                             var(--content-heading-text-color-stop-secondary));
     background-clip: text;
 }
+
+/* Stacks the form fields */
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    overflow-y: scroll;
+}
+
+.user-info, .password-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
