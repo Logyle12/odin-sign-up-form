@@ -647,3 +647,12 @@ input[type="checkbox"]:checked::after {
     opacity: 0.55;
     z-index: 1;
 }
+
+/* Container for the scrolling cover art columns */
+.sign-up-hero-collage {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
