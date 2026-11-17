@@ -602,3 +602,23 @@ input[type="checkbox"]:checked::after {
 #sign-up-button:active {
     transform: scale(0.99) translateY(-2px);
 }
+
+/* Gradient text on the button */
+#sign-up-button-text {
+    color: transparent;
+    background: linear-gradient(to right, var(--sign-up-button-text-color) 50%, 
+    var(--sign-up-button-text-color-hover) 50%);
+    background-clip: text;
+    background-position: right;
+    background-size: 200%; 
+    transition: background-position 0.45s 0.05s ease-in-out,
+                background-size 0.45s 0.05s ease-in-out;
+  
+}
+
+/* Text gradient shift on hover */
+#sign-up-button:hover #sign-up-button-text {
+    background-position: left;
+    transition: background-position 0.45s 0.05s ease-in-out,
+                background-size 0.45s 0.05s ease-in-out;
+}
