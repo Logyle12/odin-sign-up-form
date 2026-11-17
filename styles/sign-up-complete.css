@@ -183,3 +183,14 @@
     width: 160px;
     height: 160px;
 }
+
+.success-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5625rem;
+    font-family: 'Inter';
+    row-gap: 1.5rem;
+    width: 38ch;
+}
