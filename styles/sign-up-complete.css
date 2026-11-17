@@ -60,3 +60,11 @@
     position: relative;
     z-index: 4;
 }
+
+.corner-accent {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 8px 24px var(--accent-blue-outer-shadow);
+}
