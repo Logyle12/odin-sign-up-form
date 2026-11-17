@@ -316,3 +316,12 @@
 h1, h2, h3, label {
     font-family: "Manrope";
 }
+
+/* Stacks each labeled input group */
+.form-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    flex: 1 1 0;
+}
