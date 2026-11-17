@@ -553,3 +553,10 @@ input[type="checkbox"]:checked::after {
     left: 3.25px;
     position: absolute;
 }
+
+/* Centers the submit button */
+.sign-up-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
