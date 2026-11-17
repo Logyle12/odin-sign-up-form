@@ -171,3 +171,15 @@
                                             var(--content-heading-text-color-stop-secondary));
     background-clip: text;
 }
+
+.success-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.success-icon-container > img {
+    width: 160px;
+    height: 160px;
+}
