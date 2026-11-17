@@ -688,3 +688,19 @@ input[type="checkbox"]:checked::after {
     height: 100%;
     padding-top: 4rem;
 }
+
+/* Single feature row styling */
+.hero-feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    background-color: rgb(from var(--feature-icon-row-bg) r g b / 0.8);
+    border-left: 0.25px solid var(--sign-up-card-border-color-start);
+    border-top: 0.25px solid var(--sign-up-card-border-color-middle);
+    border-bottom: 0.25px solid var(--sign-up-card-border-color-middle);
+    border-right: 0.25px solid var(--sign-up-card-border-color-stop);
+    border-radius: 25px;
+}
