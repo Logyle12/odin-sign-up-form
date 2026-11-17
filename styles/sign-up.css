@@ -290,3 +290,19 @@
     visibility: visible;
     height: auto;
 }
+
+.password-match-status-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    border: 1px solid #24476A;
+    border-radius: 22px;
+    padding: 0.35rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#password-match-icon {
+    width: 1.15rem;
+    height: 1.15rem;
+}
