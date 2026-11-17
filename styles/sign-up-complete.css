@@ -48,3 +48,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.success-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    font-family: "Inter";
+    font-weight: 400;
+    clip-path: polygon(25vw 0vh, 100vw 0vh, 100vw 60vh, 75vw 100vh, 0vh 100vh, 0vw 40vh);
+    position: relative;
+    z-index: 4;
+}
