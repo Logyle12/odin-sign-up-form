@@ -451,3 +451,24 @@ input.form-control:valid {
 .requirements:has(.requirement-item.active) {
     height: auto;
 }
+
+.requirement-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    column-gap: 0.35rem;
+    font-weight: 400;
+    font-size: 0.80rem;
+    background-color: #0B2039;
+    border: 1px solid #24476A;
+    border-radius: 22px;
+    padding: 0.35rem;
+    visibility: hidden;
+    height: 0;
+}
+
+.requirement-item.active {
+    visibility: visible;
+    height: auto;
+}
