@@ -712,9 +712,21 @@ input[type="checkbox"]:checked::after {
     height: 92.5%;
 }
 
+/* Icon background and border for feature one */
+.hero-feature:nth-child(1) > .feature-icon-wrapper {
+    background-color: rgb(from var(--feature-icon-circular-bg-one) r g b / 0.4);
+    border: 1px solid rgb(from var(--feature-icon-circular-border-one) r g b / 0.5);
+}
+
 /* Accent line color for feature one */
 .hero-feature:nth-child(1) >.feature-icon-wrapper + .vertical-line {
     background-color: var(--feature-icon-circular-bg-one);
+}
+
+/* Icon background and border for feature two */
+.hero-feature:nth-child(2) > .feature-icon-wrapper {
+    background-color: rgb(from var(--feature-icon-circular-bg-two) r g b / 0.4);
+    border: 1px solid rgb(from var(--feature-icon-circular-border-two) r g b / 0.5);
 }
 
 /* Accent line color for feature two */
@@ -722,9 +734,21 @@ input[type="checkbox"]:checked::after {
     background-color: var(--feature-icon-circular-bg-two);
 }
 
+/* Icon background and border for feature three */
+.hero-feature:nth-child(3) > .feature-icon-wrapper {
+    background-color: rgb(from var(--feature-icon-circular-bg-three) r g b / 0.4);
+    border: 1px solid rgb(from var(--feature-icon-circular-border-three) r g b / 0.5);
+}
+
 /* Accent line color for feature three */
 .hero-feature:nth-child(3) >.feature-icon-wrapper + .vertical-line {
     background-color: var(--feature-icon-circular-bg-three);
+}
+
+/* Icon background and border for feature four */
+.hero-feature:nth-child(4) > .feature-icon-wrapper {
+    background-color: rgb(from var(--feature-icon-circular-bg-four) r g b / 0.4);
+    border: 1px solid rgb(from var(--feature-icon-circular-border-four) r g b / 0.5);
 }
 
 /* Accent line color for feature four */
