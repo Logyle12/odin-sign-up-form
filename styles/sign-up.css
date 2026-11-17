@@ -629,3 +629,8 @@ input[type="checkbox"]:checked::after {
     justify-content: center;
     align-items: center;
 }
+
+/* Positions the hero so its absolute children anchor to it */
+.sign-up-hero {
+    position: relative;
+}
