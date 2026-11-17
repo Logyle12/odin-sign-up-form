@@ -704,3 +704,30 @@ input[type="checkbox"]:checked::after {
     border-right: 0.25px solid var(--sign-up-card-border-color-stop);
     border-radius: 25px;
 }
+
+/* Accent line next to each feature icon */
+.vertical-line {
+    width: 4px;
+    border-radius: 28px;
+    height: 92.5%;
+}
+
+/* Accent line color for feature one */
+.hero-feature:nth-child(1) >.feature-icon-wrapper + .vertical-line {
+    background-color: var(--feature-icon-circular-bg-one);
+}
+
+/* Accent line color for feature two */
+.hero-feature:nth-child(2) >.feature-icon-wrapper + .vertical-line {
+    background-color: var(--feature-icon-circular-bg-two);
+}
+
+/* Accent line color for feature three */
+.hero-feature:nth-child(3) >.feature-icon-wrapper + .vertical-line {
+    background-color: var(--feature-icon-circular-bg-three);
+}
+
+/* Accent line color for feature four */
+.hero-feature:nth-child(4) >.feature-icon-wrapper + .vertical-line {
+    background-color: var(--feature-icon-circular-bg-four);
+}
