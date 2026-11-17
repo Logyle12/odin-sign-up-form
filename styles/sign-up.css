@@ -665,3 +665,9 @@ input[type="checkbox"]:checked::after {
     flex-grow:  1;
     overflow: hidden;
 }
+
+/* Cover art image sizing */
+.collage-image {
+    width: 100%;
+    flex-grow: 1;
+}
