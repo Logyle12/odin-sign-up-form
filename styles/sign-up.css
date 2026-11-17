@@ -671,3 +671,9 @@ input[type="checkbox"]:checked::after {
     width: 100%;
     flex-grow: 1;
 }
+
+/* Hero content sits above the collage */
+.hero-wrapper {
+    height: 100%;
+    z-index: 2;
+}
