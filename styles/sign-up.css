@@ -588,3 +588,17 @@ input[type="checkbox"]:checked::after {
                 border 0.45s 0.05s ease-in-out;
     
 }
+
+/* Button hover state */
+#sign-up-button:hover {
+    background-position: left;
+    border-color: var(--sign-up-button-color-hover);
+    transition: background-position 0.45s 0.05s ease-in-out,
+                background-size 0.45s 0.05s ease-in-out,
+                border 0.45s 0.05s ease-in-out;
+}
+
+/* Button pressed state */
+#sign-up-button:active {
+    transform: scale(0.99) translateY(-2px);
+}
