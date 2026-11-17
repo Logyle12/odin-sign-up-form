@@ -472,3 +472,8 @@ input.form-control:valid {
     visibility: visible;
     height: auto;
 }
+
+.requirement-icon {
+    width: 1rem;
+    height: 1rem;
+}
