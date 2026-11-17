@@ -311,3 +311,8 @@
     font-size: 0.875rem;
     font-weight: 500;
 }
+
+/* Heading and label font */
+h1, h2, h3, label {
+    font-family: "Manrope";
+}
