@@ -260,3 +260,10 @@
     justify-content: space-between;
     column-gap: 0.35rem;
 }
+
+.strength-segment {
+    width: 25%;
+    background-color: #263653;
+    height: 0.35rem;
+    border-radius: 1px;
+}
