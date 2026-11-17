@@ -207,3 +207,8 @@
     text-align: center;
     color: var(--text-primary);
 }
+
+.welcome-message {
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
