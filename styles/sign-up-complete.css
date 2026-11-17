@@ -101,3 +101,27 @@
         var(--accent-blue-outer-end-tone));
     clip-path: polygon(100vw 60vh, 100vw 100vh, 75vw 100vh);
 }
+
+.corner-accent-middle.top {
+    clip-path: polygon(15vw 0vh, 20vw 0vh, 0vw 32vh, 0vw 24vh);
+}
+
+.corner-accent-middle.bottom {
+    background: linear-gradient(315deg, 
+        var(--accent-blue-middle-start-tone),
+        var(--accent-blue-middle-mid-tone),
+        var(--accent-blue-middle-end-tone));
+    clip-path: polygon(100vw 68vh, 100vw 76vh, 85vw 100vh, 80vw 100vh);
+}
+
+.corner-accent-inner.top {
+    clip-path: polygon(20vw 0vh, 25vw 0vh, 0vw 40vh, 0vw 32vh);
+}
+
+.corner-accent-inner.bottom {
+    background: linear-gradient(315deg, 
+        var(--accent-blue-inner-start-tone),
+        var(--accent-blue-inner-mid-tone),
+        var(--accent-blue-inner-end-tone));
+    clip-path: polygon(100vw 60vh, 100vw 68vh, 80vw 100vh, 75vw 100vh);
+}
