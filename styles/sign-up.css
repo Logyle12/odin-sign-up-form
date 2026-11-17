@@ -244,3 +244,8 @@
     flex-direction: column;
     row-gap: 1rem;
 }
+
+.password-strength {
+    display: flex;
+    flex-direction: column;
+}
