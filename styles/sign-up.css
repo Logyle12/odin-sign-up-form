@@ -771,3 +771,11 @@ input[type="checkbox"]:checked::after {
     width: 1.75rem;
     height: 1.75rem;
 }
+
+/* Stacks the feature title and description */
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    width: 85%;
+}
