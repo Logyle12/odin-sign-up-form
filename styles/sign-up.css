@@ -477,3 +477,30 @@ input.form-control:valid {
     width: 1rem;
     height: 1rem;
 }
+
+.requirement-item:has(.requirement.valid), 
+.input-wrapper:has(#confirm-password:valid) .password-match-status-wrapper {
+    font-weight: 500;
+    background-color: #0e2c06;
+    border-color: #437f08;
+    color: var(--password-valid);
+}
+
+.requirement-item:has(.requirement.invalid),
+.input-wrapper:has(#confirm-password:invalid) .password-match-status-wrapper {
+    font-weight: 500;
+    background-color: #301722;
+    border-color: #873747;
+    color: var(--password-invalid);
+
+}
+
+.requirement.valid + .requirement-icon,
+.input-wrapper:has(#confirm-password:valid) #password-match-icon {
+    content: url("../UI Icons/Input\ Icons/validation-icon-success-lime.svg");
+}
+
+.requirement.invalid + .requirement-icon,
+.input-wrapper:has(#confirm-password:invalid) #password-match-icon {
+    content: url("../UI Icons/Input\ Icons/validation-icon-error-coral.svg");
+} 
