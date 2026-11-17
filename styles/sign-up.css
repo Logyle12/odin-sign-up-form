@@ -280,3 +280,13 @@
 .strength-label-wrapper:has(#strength-label.active) {
     height: auto;
 }
+
+#password-match-requirement {
+    visibility: hidden;
+    height: 0;
+}
+
+#password-match-requirement:has(#password-match-status.active) {
+    visibility: visible;
+    height: auto;
+}
