@@ -432,3 +432,14 @@ input.form-control {
 input.form-control:valid {
     border-color: #1774ffc1;
 }
+
+.requirements-list {
+    display: flex;
+    column-gap: 2rem;
+    line-height: 1.5;
+}
+
+#password-requirements > .requirements-list {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
