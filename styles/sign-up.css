@@ -504,3 +504,11 @@ input.form-control:valid {
 .input-wrapper:has(#confirm-password:invalid) #password-match-icon {
     content: url("../UI Icons/Input\ Icons/validation-icon-error-coral.svg");
 } 
+
+/* Placeholder text styling */
+input.form-control::placeholder {
+    color: var(--input-text-color);
+    font-family: "Manrope";
+    font-size: 0.875rem;
+    font-weight: 500;
+}
