@@ -134,3 +134,11 @@
     row-gap: 2.75rem;
     width: 100%;
 }
+
+.success-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.65rem;
+    width: 100%;
+}
