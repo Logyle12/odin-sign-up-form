@@ -405,3 +405,11 @@ h1, h2, h3, label {
     font-size: 0.9rem;
     font-weight: 500;
 }
+
+/* Removes default input styling */
+input {
+    background: none;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
