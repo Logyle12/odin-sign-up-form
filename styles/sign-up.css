@@ -677,3 +677,14 @@ input[type="checkbox"]:checked::after {
     height: 100%;
     z-index: 2;
 }
+
+/* Stacks the feature rows */
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    height: 100%;
+    padding-top: 4rem;
+}
