@@ -341,3 +341,15 @@ h1, h2, h3, label {
 .form-group p {
     font-weight: 550;
 }
+
+/* Inline link styling */
+.form-group p > a, #login-text  > a {
+    font-weight: 600;
+    color: var(--content-heading-text-color-secondary);
+    cursor: pointer;
+}
+
+/* Underline links on hover */
+.form-group p > a:hover, #login-text  > a:hover {
+    text-decoration: underline;
+}
