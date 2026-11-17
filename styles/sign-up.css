@@ -656,3 +656,12 @@ input[type="checkbox"]:checked::after {
     height: 100%;
     z-index: 0;
 }
+
+/* Single scrolling column of cover art */
+.collage-column {
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+    flex-grow:  1;
+    overflow: hidden;
+}
