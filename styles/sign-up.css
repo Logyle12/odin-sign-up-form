@@ -779,3 +779,11 @@ input[type="checkbox"]:checked::after {
     row-gap: 0.5rem;
     width: 85%;
 }
+
+/* Feature title styling */
+.feature-title {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: rgb(from var(--sign-up-button-text-color) r g b/ 0.8);
+}
