@@ -148,3 +148,13 @@
     width: 3.5rem;
     height: 3.5rem;
 }
+
+/* Sign up page title styling */
+#brand-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
