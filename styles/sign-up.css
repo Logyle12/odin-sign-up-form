@@ -369,3 +369,11 @@ h1, h2, h3, label {
     border-radius: 28px;
     opacity: 0.3;
 }
+
+/* Positions the icon inside each input */
+.input-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
