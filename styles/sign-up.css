@@ -512,3 +512,17 @@ input.form-control::placeholder {
     font-size: 0.875rem;
     font-weight: 500;
 }
+
+/* Lays out the terms checkbox and its text */
+.sign-up-legal {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    column-gap: 12px;
+    margin-top: 4px;
+}
+
+/* Line height for the terms text */
+.sign-up-legal p {
+    line-height: 1.5rem;
+}
