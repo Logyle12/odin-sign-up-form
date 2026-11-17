@@ -399,3 +399,9 @@ h1, h2, h3, label {
 .reveal-password-icon.on {
     content: url("../UI Icons/Input\ Icons/reveal-password-icon-on-gray.svg");
 }
+
+/* Helper text under an input */
+.input-helper {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
