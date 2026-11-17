@@ -306,3 +306,8 @@
     width: 1.15rem;
     height: 1.15rem;
 }
+
+#strength-label, #password-match-status {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
