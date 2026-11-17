@@ -142,3 +142,9 @@
     column-gap: 0.65rem;
     width: 100%;
 }
+
+/* Logo icon size */
+#logo-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+}
