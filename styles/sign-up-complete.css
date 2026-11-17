@@ -41,3 +41,10 @@
     /* Decorative */
     --divider-blue: #164A91;
 }
+
+/* Reset default spacing and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
