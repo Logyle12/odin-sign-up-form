@@ -201,3 +201,9 @@
     align-items: center;
     justify-content: center;
 }
+
+#welcome-title {
+    line-height: 1.25;
+    text-align: center;
+    color: var(--text-primary);
+}
