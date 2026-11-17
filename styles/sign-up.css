@@ -387,3 +387,15 @@ h1, h2, h3, label {
     top: 0.6275rem;
     left: 0.85rem;
 }
+
+/* Positions the show/hide password icon */
+.reveal-password-icon {
+    top: 0.8275rem;
+    left: 25.75rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.reveal-password-icon.on {
+    content: url("../UI Icons/Input\ Icons/reveal-password-icon-on-gray.svg");
+}
