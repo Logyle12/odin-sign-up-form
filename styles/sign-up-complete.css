@@ -1,0 +1,43 @@
+:root {
+    /* Backgrounds */
+    --bg-primary: #010D2B;
+    --bg-secondary: #020F30;
+    --bg-gradient: #061943;
+    
+    /* Outer diagonal accent */
+    --accent-blue-outer-start-tone: #033BAA;
+    --accent-blue-outer-mid-tone: #04318B;
+    --accent-blue-outer-end-tone: #032572;
+    --accent-blue-outer-shadow: #010D2A;
+
+    /* Middle diagonal accent */
+    --accent-blue-middle-start-tone: #032878;
+    --accent-blue-middle-mid-tone: #021B56;
+    --accent-blue-middle-end-tone: #03143E;
+    --accent-blue-middle-shadow: #010A22;
+
+    /* Inner diagonal accent */
+    --accent-blue-inner-start-tone: #021441;
+    --accent-blue-inner-mid-tone: #021033;
+    --accent-blue-inner-end-tone: #010E2D;
+    --accent-blue-inner-shadow: #010713;
+
+
+    /* Blue accents */
+    --primary-blue: #1678F9;
+    --blue-dark: #043078;
+    --blue-light: #075EFF;
+
+    /* Heading text colors */
+    --content-heading-text-color-primary: #F4F5F8;
+    --content-heading-text-color-secondary: #2D7BFF;
+    --content-heading-text-color-stop-secondary: #194bbf;
+
+    /* Text */
+    --text-primary: #FFFFFF;
+    --text-secondary: #C5D3F0;
+    --text-muted: #91A9DB;
+
+    /* Decorative */
+    --divider-blue: #164A91;
+}
