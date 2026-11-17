@@ -68,3 +68,24 @@
     z-index: 1;
     box-shadow: 0 8px 24px var(--accent-blue-outer-shadow);
 }
+
+.corner-accent-outer {
+    background: linear-gradient(135deg, 
+        var(--accent-blue-outer-start-tone),
+        var(--accent-blue-outer-mid-tone),
+        var(--accent-blue-outer-end-tone));
+}
+
+.corner-accent-middle {
+    background: linear-gradient(135deg, 
+        var(--accent-blue-middle-start-tone),
+        var(--accent-blue-middle-mid-tone),
+        var(--accent-blue-middle-end-tone));
+}
+
+.corner-accent-inner {
+    background: linear-gradient(135deg, 
+        var(--accent-blue-inner-start-tone),
+        var(--accent-blue-inner-mid-tone),
+        var(--accent-blue-inner-end-tone));
+}
