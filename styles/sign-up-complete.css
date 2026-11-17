@@ -89,3 +89,15 @@
         var(--accent-blue-inner-mid-tone),
         var(--accent-blue-inner-end-tone));
 }
+
+.corner-accent-outer.top {
+    clip-path: polygon(0vw 0vh, 25vw 0vh, 0vw 40vh);
+}
+
+.corner-accent-outer.bottom {
+    background: linear-gradient(315deg, 
+        var(--accent-blue-outer-start-tone),
+        var(--accent-blue-outer-mid-tone),
+        var(--accent-blue-outer-end-tone));
+    clip-path: polygon(100vw 60vh, 100vw 100vh, 75vw 100vh);
+}
