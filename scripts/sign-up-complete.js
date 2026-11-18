@@ -14,3 +14,10 @@ console.log("Stored Username: " + storedUsername);
 
 /** @type {HTMLElement} Element that displays the new user's name. */
 const usernameDisplay = document.querySelector("#sign-up-username");
+
+// -----------------------------------------------------------------------------
+// 3. RENDERING
+// -----------------------------------------------------------------------------
+
+// textContent so the username is always shown as plain text.
+usernameDisplay.textContent = storedUsername;
