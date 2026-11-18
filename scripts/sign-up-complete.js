@@ -7,3 +7,10 @@
 const storedUsername = localStorage.getItem("username");
 
 console.log("Stored Username: " + storedUsername);
+
+// -----------------------------------------------------------------------------
+// 2. DOM REFERENCES
+// -----------------------------------------------------------------------------
+
+/** @type {HTMLElement} Element that displays the new user's name. */
+const usernameDisplay = document.querySelector("#sign-up-username");
