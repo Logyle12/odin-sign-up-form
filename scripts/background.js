@@ -75,7 +75,7 @@ function getRandomCoverArt() {
     recordUsedCoverArt(coverArtFilename);
 
     // Full path to the image file
-    const coverArtImagePath = `../UI Images/Video Game Cover Art/${coverArtFilename}`;
+    const coverArtImagePath = `./UI Images/Video Game Cover Art/${coverArtFilename}`;
 
     // Build the image element
     const coverArt = createCoverArt(coverArtImagePath);
