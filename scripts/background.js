@@ -67,7 +67,7 @@ function getRandomCoverArt() {
     const coverArtArray = getAvailableCoverArt();
 
     // Random index into the available list
-    const coverArtIndex = Math.floor(Math.random() * (coverArtArray.length - 1));
+    const coverArtIndex = Math.floor(Math.random() * (coverArtArray.length));
 
     const coverArtFilename = coverArtArray[coverArtIndex]["Cover Art"];
     
