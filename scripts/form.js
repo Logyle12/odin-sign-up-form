@@ -778,16 +778,22 @@ function handleConfirmPasswordInput(event) {
 function togglePasswordVisibility(event) {
     const revealIcon = event.target;
 
-    const targetInput = revealIcon.parentElement.querySelector('input');
+    const targetInput = revealIcon.parentElement.parentElement.querySelector('input');
 
     if (!revealIcon.classList.contains('on')) {
         revealIcon.classList.add('on');
         targetInput.type = "text";
+        if (revealIcon.parentElement.ariaLabel != "Show password") {
+            revealIcon.parentElement.ariaLabel = "Show password"
+        }
     }
 
     else {
         revealIcon.classList.remove('on');
         targetInput.type = "password";
+        if (revealIcon.parentElement.ariaLabel != "Hide password") {
+            revealIcon.parentElement.ariaLabel = "Hide password"
+        }
     }
 }
 
