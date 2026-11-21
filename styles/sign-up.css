@@ -389,11 +389,22 @@ h1, h2, h3, label {
 }
 
 /* Positions the show/hide password icon */
-.reveal-password-icon {
+button:has(.reveal-password-icon) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: none;
+    background: transparent;
+    padding: 0;
     top: 0.8275rem;
     left: 25.75rem;
-    cursor: pointer;
     z-index: 1;
+    cursor: pointer;
+}
+
+.reveal-password-icon {
+    position: static;
 }
 
 .reveal-password-icon.on {
