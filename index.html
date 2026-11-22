@@ -19,23 +19,23 @@
             <div class="sign-up-card">
                 <section class="sign-up-content">
                     <div class="content-wrapper">
-                        <section class="content-intro">
-                            <div class="content-header">
+                        <section class="brand-intro">
+                            <div class="brand-header">
                                 <div id="logo-wrapper">
                                     <img src="UI Icons/Input Icons/logo-icon.svg" alt="" id="logo-icon">
                                 </div>
-                                <h1 id="content-title">
+                                <h1 id="brand-title">
                                     <span class="heading-primary">Play</span>
                                     <span class="heading-secondary">Vault</span>
                                 </h1>
                             </div>
-                            <p id="content-tagline">
+                            <p id="brand-tagline">
                                 <span class="heading-primary">Your Games.<br></span>
                                 <span class="heading-secondary">All In One Place.</span>
                             </p>
                         </section>
                         <form id="sign-up-form" autocomplete="off" action="./sign-up-complete.html" method="GET">
-                            <section class="user-info">
+                            <section class="account-fields">
                                 <div class="form-group">
                                     <label for="username">
                                         Username
@@ -64,7 +64,7 @@
                                                 </div>
                                                 <div class="requirement-item">
                                                     <p class="requirement username-requirement" 
-                                                        id="username-requirement-letters"
+                                                        id="username-requirement-format"
                                                         data-regex="(?=.*[A-Za-z])(?=.*[0-9])(?!.*[^A-Za-z0-9_])[A-Za-z0-9_]+">
                                                         Letters, numbers and underscores only
                                                     </p>
@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="password-info">
+                            <section class="password-fields">
                                 <div class="form-group">
                                     <label for="password">
                                         Password
@@ -118,8 +118,8 @@
                                                 <div class="strength-segment" id="strength-segment-3"></div>
                                                 <div class="strength-segment" id="strength-segment-4"></div>
                                             </div>
-                                            <div class="strength-label-wrapper">
-                                                <p id="strength-label"></p>
+                                            <div class="password-strength-label-wrapper">
+                                                <p id="password-strength-label"></p>
                                             </div>
                                         </section>
                                         <section class="requirements" id="password-requirements">
@@ -186,7 +186,7 @@
                                             maxlength="128" 
                                             pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,128}$"
                                             required disabled>
-                                        <section id="password-match-requirement">
+                                        <section id="password-match-feedback">
                                             <div class="password-match-status-wrapper">
                                                 <p id="password-match-status">
                                                     Passwords match
@@ -201,7 +201,7 @@
                                 </div>
                             </section>
                             <div class="form-group">
-                                <section class="sign-up-legal">
+                                <section class="sign-up-consent">
                                     <p>I am at least 16 years old and accept the <a id="terms-and-conditions-link">Terms & Conditions</a>.</p>
                                     <input type="checkbox" id="terms-and-conditions" name="terms_and_conditions" required>
                                 </section>
@@ -212,7 +212,7 @@
                                 <span id="sign-up-button-text">Sign Up</span>
                             </button>
                         </section>
-                        <section class="login-wrapper">
+                        <section class="login-prompt">
                             <p id="login-text">Already have an account? <a id="login-link">Log in</a></p>
                         </section>
                     </div>
@@ -267,7 +267,7 @@
                                 <div class="feature-icon-wrapper">
                                     <img src="UI Icons/Feature Icons/library-icon.svg" alt="" class="feature-icon">
                                 </div>
-                                <div class="vertical-line"></div>
+                                <div class="feature-accent-line"></div>
                                 <div class="feature-content">
                                     <h3 class="feature-title">Build your library</h3>
                                     <p class="feature-description">Import your game libraries, and manage them all in one place.</p>
@@ -277,7 +277,7 @@
                                 <div class="feature-icon-wrapper">
                                     <img src="UI Icons/Feature Icons/review-icon.svg" alt="" class="feature-icon">
                                 </div>
-                                <div class="vertical-line"></div>
+                                <div class="feature-accent-line"></div>
                                 <div class="feature-content">
                                     <h3 class="feature-title">Share your thoughts</h3>
                                     <p class="feature-description">Keep track of your ratings and write reviews whenever you finish a game.</p>
@@ -287,7 +287,7 @@
                                 <div class="feature-icon-wrapper">
                                     <img src="UI Icons/Feature Icons/custom-list-icon.svg" alt="" class="feature-icon">
                                 </div>
-                                <div class="vertical-line"></div>
+                                <div class="feature-accent-line"></div>
                                 <div class="feature-content">
                                     <h3 class="feature-title">Create custom lists</h3>
                                     <p class="feature-description">Organize your game collection by platforms, genre, favorites, and more.</p>
@@ -297,7 +297,7 @@
                                 <div class="feature-icon-wrapper">
                                     <img src="UI Icons/Feature Icons/backlog-icon.svg" alt="" class="feature-icon">
                                 </div>
-                                <div class="vertical-line"></div>
+                                <div class="feature-accent-line"></div>
                                 <div class="feature-content">
                                     <h3 class="feature-title">Never lose your backlog</h3>
                                     <p class="feature-description">Save games for later so you always know what to play next.</p>
