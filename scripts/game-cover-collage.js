@@ -2,10 +2,10 @@
 import coverArtData from '../UI Images/cover-art-filenames.json' with {type: 'json'};
 
 // Total number of cover art images available
-const TOTAL_COVER_ART = coverArtData.length;
+const COVER_ART_COUNT = coverArtData.length;
 
 // Every scrolling column in the collage
-const allColumns = document.querySelectorAll('.collage-column');
+const collageColumns = document.querySelectorAll('.collage-column');
 
 // Cover art already shown 
 let usedCoverArt = [];
@@ -13,7 +13,7 @@ let usedCoverArt = [];
 // Returns cover art entries that haven't been shown yet
 function getAvailableCoverArt() {
     // Every cover has been used, reset the pool
-    if (usedCoverArt.length == TOTAL_COVER_ART) {
+    if (usedCoverArt.length == COVER_ART_COUNT) {
         usedCoverArt.length = 0;
     }
 
@@ -44,12 +44,12 @@ function createCoverArt(coverArtImagePath) {
 }
 
 // Marks a cover art filename as used for this cycle
-function recordUsedCoverArt(coverArtFilename) {
+function markUsedCoverArt(coverArtFilename) {
     // Re-check what's currently available
     const availableCoverArt = getAvailableCoverArt();
 
     // Only record if there's still room left this cycle
-    if (usedCoverArt.length < TOTAL_COVER_ART) {
+    if (usedCoverArt.length < COVER_ART_COUNT) {
         // Find the matching cover art for this filename
         const matchedCoverArtFilename = availableCoverArt.find((coverArtEntry) => {
             const entryFilename = coverArtEntry["Cover Art"];
@@ -64,15 +64,15 @@ function recordUsedCoverArt(coverArtFilename) {
 // Picks a random unused cover art and builds its image element
 function getRandomCoverArt() {
     // Get cover art still available 
-    const coverArtArray = getAvailableCoverArt();
+    const availableCoverArtEntries = getAvailableCoverArt();
 
     // Random index into the available list
-    const coverArtIndex = Math.floor(Math.random() * (coverArtArray.length));
+    const coverArtIndex = Math.floor(Math.random() * (availableCoverArtEntries.length));
 
-    const coverArtFilename = coverArtArray[coverArtIndex]["Cover Art"];
+    const coverArtFilename = availableCoverArtEntries[coverArtIndex]["Cover Art"];
     
     // Mark it as used
-    recordUsedCoverArt(coverArtFilename);
+    markUsedCoverArt(coverArtFilename);
 
     // Full path to the image file
     const coverArtImagePath = `./UI Images/Video Game Cover Art/${coverArtFilename}`;
@@ -84,9 +84,9 @@ function getRandomCoverArt() {
 }
 
 // Fills every column with a random cover art image on load
-function initializeCollage() {
+function populateCollage() {
     // Go through every column
-    allColumns.forEach(column => {
+    collageColumns.forEach(column => {
         // Get existing image elements in the column
         const collageImages = Array.from(column.children);
         // Swap each one's source for a random cover
@@ -135,7 +135,7 @@ function scrollCollage(column) {
 }
 
 // Fill every column on load
-initializeCollage();
+populateCollage();
 
 // Keep columns scrolling, checking for a recycle every 12ms
-setInterval(() => allColumns.forEach(scrollCollage), 12);
+setInterval(() => collageColumns.forEach(scrollCollage), 12);
