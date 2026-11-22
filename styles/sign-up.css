@@ -182,21 +182,21 @@
 }
 
 /* Stacks the heading and tagline */
-.content-intro {
+.brand-intro {
     display: flex;
     flex-direction: column;
     row-gap: 0.65rem;
 }
 
 /* Aligns the logo with the title */
-.content-header {
+.brand-header {
     display: flex;
     align-items: center;
     column-gap: 0.65rem;
 }
 
 /* Sign up page title styling */
-#content-title{
+#brand-title{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,7 +212,7 @@
 }
 
 /* Tagline text styling */
-#content-tagline {
+#brand-tagline {
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 3rem;
@@ -239,7 +239,7 @@
     overflow-y: scroll;
 }
 
-.user-info, .password-info {
+.account-fields, .password-fields {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -268,25 +268,25 @@
     border-radius: 1px;
 }
 
-.strength-label-wrapper{
+.password-strength-label-wrapper{
     height: 0;
     text-align: right;
 }
 
-.password-strength:has(#strength-label.active) {
+.password-strength:has(#password-strength-label.active) {
     row-gap: 0.75rem;
 }
 
-.strength-label-wrapper:has(#strength-label.active) {
+.password-strength-label-wrapper:has(#password-strength-label.active) {
     height: auto;
 }
 
-#password-match-requirement {
+#password-match-feedback {
     visibility: hidden;
     height: 0;
 }
 
-#password-match-requirement:has(#password-match-status.active) {
+#password-match-feedback:has(#password-match-status.active) {
     visibility: visible;
     height: auto;
 }
@@ -307,7 +307,7 @@
     height: 1.15rem;
 }
 
-#strength-label, #password-match-status {
+#password-strength-label, #password-match-status {
     font-size: 0.875rem;
     font-weight: 500;
 }
@@ -332,7 +332,7 @@ h1, h2, h3, label {
     font-weight: 550;
 }
 
-.password-info p {
+.password-fields p {
     font-size: 0.75rem;
     font-size: 400;
 }
@@ -525,7 +525,7 @@ input.form-control::placeholder {
 }
 
 /* Lays out the terms checkbox and its text */
-.sign-up-legal {
+.sign-up-consent {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -534,7 +534,7 @@ input.form-control::placeholder {
 }
 
 /* Line height for the terms text */
-.sign-up-legal p {
+.sign-up-consent p {
     line-height: 1.5rem;
 }
 
@@ -635,7 +635,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Centers the login link row */
-.login-wrapper {
+.login-prompt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -717,7 +717,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Accent line next to each feature icon */
-.vertical-line {
+.feature-accent-line {
     width: 4px;
     border-radius: 28px;
     height: 92.5%;
@@ -730,7 +730,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Accent line color for feature one */
-.hero-feature:nth-child(1) >.feature-icon-wrapper + .vertical-line {
+.hero-feature:nth-child(1) >.feature-icon-wrapper + .feature-accent-line {
     background-color: var(--feature-icon-circular-bg-one);
 }
 
@@ -741,7 +741,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Accent line color for feature two */
-.hero-feature:nth-child(2) >.feature-icon-wrapper + .vertical-line {
+.hero-feature:nth-child(2) >.feature-icon-wrapper + .feature-accent-line {
     background-color: var(--feature-icon-circular-bg-two);
 }
 
@@ -752,7 +752,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Accent line color for feature three */
-.hero-feature:nth-child(3) >.feature-icon-wrapper + .vertical-line {
+.hero-feature:nth-child(3) >.feature-icon-wrapper + .feature-accent-line {
     background-color: var(--feature-icon-circular-bg-three);
 }
 
@@ -763,7 +763,7 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Accent line color for feature four */
-.hero-feature:nth-child(4) >.feature-icon-wrapper + .vertical-line {
+.hero-feature:nth-child(4) >.feature-icon-wrapper + .feature-accent-line {
     background-color: var(--feature-icon-circular-bg-four);
 }
 
