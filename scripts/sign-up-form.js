@@ -85,11 +85,11 @@ const STRENGTH_TIERS = {
 };
 
 // US QWERTY rows used to detect keyboard walks (e.g. "qwe", "asd").
-const NUMBER_ROW = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-const TOP_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
-const HOME_ROW = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
-const BOTTOM_ROW = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-const KEYBOARD_ROWS = [NUMBER_ROW, TOP_ROW, HOME_ROW, BOTTOM_ROW];
+const KEYBOARD_NUMBER_ROW = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+const KEYBOARD_TOP_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
+const KEYBOARD_HOME_ROW = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+const KEYBOARD_BOTTOM_ROW = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
+const KEYBOARD_ROWS = [KEYBOARD_NUMBER_ROW, KEYBOARD_TOP_ROW, KEYBOARD_HOME_ROW, KEYBOARD_BOTTOM_ROW];
 
 // Matches a single digit or one of the allowed special characters. 
 const DIGIT_OR_SYMBOL_PATTERN = /[0-9!@#$%^&*]/;
@@ -170,7 +170,7 @@ function calculateCharacterClassBonus() {
 }
 
 /** @param {string} password */
-function calculateInteriorBonus(password) {
+function calculateInteriorCharacterBonus(password) {
     const interiorStart = Math.round(0.6 * password.length) - 1;
     const interiorCharacters = password.slice(
         interiorStart,
@@ -262,7 +262,7 @@ function calculateSequentialRunPenalty(password) {
  * @param {string} key
  * @returns {Object<string, string[]> | undefined} undefined if the key isn't on the map
  */
-function getAdjacencyMap(key) {
+function getKeyboardAdjacencyMap(key) {
     console.log("Key: " + key);
     console.table(KEYBOARD_ROWS);
 
@@ -325,7 +325,7 @@ function calculateKeyboardWalkPenalty(password) {
         for (let characterIndex = 0; characterIndex < password.length - 1; characterIndex++) {
             const character = password[characterIndex];
             const nextCharacter = password[characterIndex + 1];
-            const adjacencyMap = getAdjacencyMap(character);
+            const adjacencyMap = getKeyboardAdjacencyMap(character);
 
             console.log("Adjacency Map: ");
             console.table(adjacencyMap);
@@ -448,7 +448,7 @@ function calculateDatePenalty(password) {
  * symbols tacked onto the last three characters only.
  * @param {string} password
  */
-function calculateLazyStructurePenalty(password) {
+function calculatePredictablePatternPenalty(password) {
     let penalty = 0;
 
     const hasLeadingCapital = /^[A-Z][^A-Z]*$/.test(password);
@@ -532,7 +532,7 @@ function calculateBonusTotal(password) {
 
     bonusTotal += calculateLengthScore(password);
     bonusTotal += calculateCharacterClassBonus();
-    bonusTotal += calculateInteriorBonus(password);
+    bonusTotal += calculateInteriorCharacterBonus(password);
     bonusTotal += calculateDelimiterBonus(password);
     bonusTotal += calculateUniquenessBonus(password);
 
@@ -552,7 +552,7 @@ function calculatePenaltyTotal(password) {
     penaltyTotal -= calculateSequentialRunPenalty(password);
     penaltyTotal -= calculatePronounceabilityPenalty(password);
     penaltyTotal -= calculateDatePenalty(password);
-    penaltyTotal -= calculateLazyStructurePenalty(password);
+    penaltyTotal -= calculatePredictablePatternPenalty(password);
     penaltyTotal -= calculateRepetitionPenalty(password);
 
     console.log("Penalty Total: " + penaltyTotal);
@@ -667,7 +667,7 @@ function updateRequirementState(requirementElement, inputValue) {
 /**
  * @param {HTMLInputElement} input
  */
-function updateRequirements(input) {
+function updateInputRequirements(input) {
     const inputValue = input.value;
 
     const requirementElements = input.parentElement.querySelectorAll('.requirement');
@@ -727,13 +727,13 @@ function validatePasswordMatch(confirmInput) {
 // -----------------------------------------------------------------------------
 
 function handleUsernameInput(event) {
-    updateRequirements(event.target);
+    updateInputRequirements(event.target);
 }
 
 function handlePasswordInput(event) {
     const password = event.target.value;
 
-    updateRequirements(event.target);
+    updateInputRequirements(event.target);
     updateStrengthLabelVisibility(password);
 
     if (confirmPasswordInput.value.length > 1) {
@@ -806,7 +806,7 @@ function handleSignUpSubmit() {
 // 11. INITIALISATION
 // -----------------------------------------------------------------------------
 
-function registerEventListeners() {
+function registerFormEventListeners() {
     usernameInput.addEventListener('input', handleUsernameInput);
     passwordInput.addEventListener('input', handlePasswordInput);
     passwordInput.addEventListener('paste', handlePasswordInput);
@@ -820,4 +820,4 @@ function registerEventListeners() {
     signUpForm.addEventListener('submit', handleSignUpSubmit);
 }
 
-registerEventListeners();
+registerFormEventListeners();
