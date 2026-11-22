@@ -29,11 +29,21 @@
 
     /* Form input colors */
     --input-fields-background: #0D1429;
+    --input-border-color: #164196c8;
+    --input-valid-border-color: #1774ffc1;
     --input-inset-border-color: #2B3555;
     --input-text-color: #7F889B;
+    --checkbox-border-color: #596480;
 
+    /* Form validation colors */
+    --status-border-color: #24476A;
     --password-valid: #88e76e;
     --password-invalid: #FDA4AF;
+    --requirement-background-color: #0B2039;
+    --requirement-valid-background-color: #0e2c06;
+    --requirement-valid-border-color: #437f08;
+    --requirement-invalid-background-color: #301722;
+    --requirement-invalid-border-color: #873747;
 
     /* Sign up button hover color */
     --sign-up-button-color-hover: #2260ca;
@@ -53,7 +63,7 @@
     /* Feature icon colors, icon three */
     --feature-icon-circular-bg-three: #B8531E;
     --feature-icon-circular-border-three: #fb923c;
-    
+
     /* Feature icon colors, icon four */
     --feature-icon-circular-bg-four: #93cf24;
     --feature-icon-circular-border-four: #bef26480;
@@ -272,7 +282,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
-    border: 1px solid #24476A;
+    border: 1px solid var(--status-border-color);
     border-radius: 22px;
     padding: 0.35rem;
     align-items: center;
@@ -409,7 +419,7 @@ input.form-control {
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 3rem;
-    border: 1.5px solid rgba(22, 65, 150, 0.785);
+    border: 1.5px solid var(--input-border-color);
     border-radius: 6px;
     background-color: var(--input-fields-background);
     color: var(--input-text-color);
@@ -418,7 +428,7 @@ input.form-control {
 }
 
 input.form-control:valid {
-    border-color: #1774ffc1;
+    border-color: var(--input-valid-border-color);
 }
 
 .requirements-list {
@@ -448,8 +458,8 @@ input.form-control:valid {
     column-gap: 0.35rem;
     font-weight: 400;
     font-size: 0.80rem;
-    background-color: #0B2039;
-    border: 1px solid #24476A;
+    background-color: var(--requirement-background-color);
+    border: 1px solid var(--status-border-color);
     border-radius: 22px;
     padding: 0.35rem;
     visibility: hidden;
@@ -469,16 +479,16 @@ input.form-control:valid {
 .requirement-item:has(.requirement.valid), 
 .input-wrapper:has(#confirm-password:valid) .password-match-status-wrapper {
     font-weight: 500;
-    background-color: #0e2c06;
-    border-color: #437f08;
+    background-color: var(--requirement-valid-background-color);
+    border-color: var(--requirement-valid-border-color);
     color: var(--password-valid);
 }
 
 .requirement-item:has(.requirement.invalid),
 .input-wrapper:has(#confirm-password:invalid) .password-match-status-wrapper {
     font-weight: 500;
-    background-color: #301722;
-    border-color: #873747;
+    background-color: var(--requirement-invalid-background-color);
+    border-color: var(--requirement-invalid-border-color);
     color: var(--password-invalid);
 
 }
@@ -521,9 +531,9 @@ input[type="checkbox"]#terms-and-conditions {
     width: 1.35rem;
     height: 1.25rem;
     margin-top: 4px;
-    border: 1.5px solid #596480;
+    border: 1.5px solid var(--checkbox-border-color);
     border-radius: 6px;
-    background-color: #0D1429;
+    background-color: var(--input-fields-background);
     cursor: pointer;
     position: relative;
     vertical-align: text-top;
