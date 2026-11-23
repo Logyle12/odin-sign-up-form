@@ -156,7 +156,6 @@ function calculateCharacterClassBonus() {
 
     if (classCount > 1) {
         for (const bonusRule of Object.values(CHARACTER_CLASS_BONUSES)) {
-            console.log(bonusRule);
 
             if (bonusRule.classCount === classCount) {
                 classBonus += bonusRule.points;
@@ -264,7 +263,6 @@ function calculateSequentialRunPenalty(password) {
  */
 function getKeyboardAdjacencyMap(key) {
     console.log("Key: " + key);
-    console.table(KEYBOARD_ROWS);
 
     const rowIndex = KEYBOARD_ROWS.findIndex((keyboardRow) => {
         return keyboardRow.includes(key);
@@ -305,9 +303,6 @@ function getKeyboardAdjacencyMap(key) {
     adjacencyMap[key] = adjacentKeys.filter(
         (adjacentKey) => adjacentKey !== undefined
     );
-
-    console.log('Adjacencies: ');
-    console.table(adjacencyMap);
 
     return adjacencyMap;
 }
@@ -473,7 +468,7 @@ function calculatePredictablePatternPenalty(password) {
         }
     }
 
-    console.log("Penalty (Lazy Structure): " + penalty);
+    console.log("Penalty (Predictable Pattern): " + penalty);
 
     return penalty;
 }
@@ -489,15 +484,8 @@ function calculateRepetitionPenalty(password) {
     for (const character of password) {
         characterCounts[character] = (characterCounts[character] ?? 1);
 
-        // console.log("Character: " + character);
-        // console.log("Stack: ");
-        // console.table(characterStack);
-
         if (character === characterStack[characterStack.length - 1]) {
             characterCounts[character] += 1;
-
-            // console.log("Charcter Counts: ");
-            // console.table(characterCounts);
         }
 
         characterStack.push(character);
@@ -508,16 +496,11 @@ function calculateRepetitionPenalty(password) {
             if (characterCount > 1) {
                 const characterPenalty = 2 * Math.pow(characterCount, 2);
 
-                // console.log("Character Penalty: " + characterPenalty);
-
                 return runningPenalty + characterPenalty;
             }
 
             return runningPenalty;
         }, 0);
-
-
-    console.log("Penalty (Repetition): " + repetitionPenalty);
 
     return repetitionPenalty;
 }
@@ -590,16 +573,12 @@ function renderStrengthMeter(rawScore) {
     for (const [tierKey, tier] of Object.entries(STRENGTH_TIERS)) {
         const [lowestScore, highestScore] = tier.scoreRange;
 
-        console.log("Tier Key: " + tierKey);
-
         if (clampedScore >= lowestScore && clampedScore <= highestScore) {
             for (let segmentIndex = 0; segmentIndex < tier.segmentCount; segmentIndex++) {
                 const segment = strengthMeterSegments[segmentIndex];
 
                 console.log("Segment: ");
                 console.log(segment);
-
-                console.log("Tier: " + tier);
                 console.log("Color: " + tier.color);
 
                 if (segment.style.backgroundColor !== tier.color) {
