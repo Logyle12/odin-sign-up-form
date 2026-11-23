@@ -570,7 +570,7 @@ function renderStrengthMeter(rawScore) {
 
     console.log("Clamped Score: " + clampedScore);
 
-    for (const [tierKey, tier] of Object.entries(STRENGTH_TIERS)) {
+    for (const tier of Object.values(STRENGTH_TIERS)) {
         const [lowestScore, highestScore] = tier.scoreRange;
 
         if (clampedScore >= lowestScore && clampedScore <= highestScore) {
