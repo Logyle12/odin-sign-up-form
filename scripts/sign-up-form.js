@@ -18,7 +18,7 @@ const confirmPasswordInput = document.querySelector('input#confirm-password');
 const strengthMeterSegments = document.querySelectorAll('.strength-segment');
 
 /** @type {HTMLElement} */
-const strengthLabel = document.querySelector('#strength-label');
+const strengthLabel = document.querySelector('#password-strength-label');
 
 /** @type {HTMLElement} */
 const passwordMatchStatus = document.querySelector('#password-match-status');
