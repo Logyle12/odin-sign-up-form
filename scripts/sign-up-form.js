@@ -40,12 +40,6 @@ const CHARACTER_CLASS_BONUSES = {
 // Meter appearance for each score range. 
 
 const STRENGTH_TIERS = {
-    EMPTY_METER: {
-        scoreRange: [0, 100],
-        color: "#263653",
-        label: "",
-        segmentCount: 4
-    },
     VERY_WEAK: {
         scoreRange: [1, 19],
         color: "#FF4D6D",
@@ -574,19 +568,32 @@ function renderStrengthMeter(rawScore) {
         const [lowestScore, highestScore] = tier.scoreRange;
 
         if (clampedScore >= lowestScore && clampedScore <= highestScore) {
-            for (let segmentIndex = 0; segmentIndex < tier.segmentCount; segmentIndex++) {
+            for (let segmentIndex = 0; segmentIndex < strengthMeterSegments.length; segmentIndex++) {
                 const segment = strengthMeterSegments[segmentIndex];
 
                 console.log("Segment: ");
                 console.log(segment);
                 console.log("Color: " + tier.color);
 
-                if (segment.style.backgroundColor !== tier.color) {
-                    segment.style.backgroundColor = tier.color;
+                if ((segmentIndex + 1) <= (tier.segmentCount) && tier.segmentCount !== null) {
+                        
+                    if (segment.style.backgroundColor !== tier.color) {
+                        if (!segment.classList.contains('filled')) {
+                            segment.classList.add('filled');
+                        }
+                        
+                        if (strengthLabel.textContent !== tier.label) {
+                            strengthLabel.textContent = tier.label;
+                        }
+    
+                        segment.style.setProperty('--strength-segment-color', tier.color);
+                    }
                 }
 
-                if (strengthLabel.textContent !== tier.label) {
-                    strengthLabel.textContent = tier.label;
+                else {
+                    if (segment.classList.contains('filled')) {
+                        segment.classList.remove('filled');
+                    }
                 }
             }
         }
@@ -602,7 +609,9 @@ function updateStrengthMeter(password) {
 // Shows the strength label while the password field has text, hides it when empty.
 function updateStrengthLabelVisibility(password) {
     if (password.length < 1) {
+        strengthMeterSegments[0].classList.remove('filled');
         strengthLabel.classList.remove('active');
+        strengthLabel.textContent = "";
     }
 
     else if (!strengthLabel.classList.contains('active')) {
