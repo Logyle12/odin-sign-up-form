@@ -705,7 +705,7 @@ function validatePasswordMatch(confirmInput) {
     }
 
     else {
-        confirmInput.setCustomValidity("Please Enter The CorrecT Password.");
+        confirmInput.setCustomValidity("Passwords do not match.");
         showPasswordsDoNotMatch();
     }
 }
