@@ -255,6 +255,10 @@
     border-radius: 1px;
 }
 
+.strength-segment.filled {
+    background-color: var(--strength-segment-color);
+}
+
 .password-strength-label-wrapper{
     height: 0;
     text-align: right;
